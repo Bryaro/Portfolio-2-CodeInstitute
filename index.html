@@ -3,13 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
+    <header>
+        <h2><i class="far fa-hand-rock fa-sm"></i> Roshambo <i class="far fa-hand-scissors fa-rotate-270 fa-sm"></i></h2>
+    </header>
 
-    <h2>Test</h2>
+    <section class="game-area">
+        <div>
+            <p>Decide your option:</p>
+            <button data-option="0" aria-label="Rock" class="control">Rock</button>
+            <button data-option="1" aria-label="Paper" class="control">Paper</button>
+            <button data-option="2" aria-label="Scissors" class="control">Scissors</button>
+        </div>
+        <div class="player">
+            <h3 class="scores">Your score is: <span id="player-score">0</span></h3>
+            <img class="hands-image" src="assets/images/RockScissorsPaper.jpg" alt="Rock-Scissors-Paper">
+        </div>
+        <div class="computer-player">
+            <h3 class="scores">Computers-score is: <span id="computer-score">0</span></h3>
+        </div>
+    </section>
     
+    <footer>
+        <ul class="social-container">
+            <li>
+                <a href="https://github.com/Bryaro" target="_blank" class="social-icons" aria-label="Visit my github page, opens in a new tab"><i
+                        class="fab fa-github-square"></i></a>
+            </li>
+            <li class="copy-right">
+                ©2023 by Briaro. All rights reserved.
+            </li>
+        </ul>
+    </footer>
+    
+    <script
+    src="https://kit.fontawesome.com/832429a4dd.js"
+    crossorigin="anonymous"
+  ></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
