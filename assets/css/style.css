@@ -47,10 +47,16 @@ header {
     background-color: #45a049;
 }
 
-.hands-image {
-    width: 50%;
+.computer-image, .player-image {
+    width: 200px;
     border-radius: 15px;
 }
+
+
+/* .player-image {
+    max-width: 100%;
+    height: auto;
+} */
 
 /* Scores Styling */
 .scores {
