@@ -18,14 +18,14 @@ header {
 }
 
 .logo {
-    color: #000000;
+    color: white;
     text-decoration: none;
 }
 
 h1 {
     text-decoration: none;
     text-transform: uppercase;
-    color: black;
+    color: white;
 }
 
 .game-area {
