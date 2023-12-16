@@ -98,4 +98,9 @@ footer {
     .hands-image {
         width: 200px;
     }
+
+.player-computer-container {
+    display: inline-flex;
+    gap: 2em;
+}
 }
