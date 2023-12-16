@@ -6,6 +6,7 @@ let computerImage = document.getElementsByClassName("computer-image");
 let message = document.getElementById("message");
 let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
 
+
 for (let button of buttons) {
     console.log("button was clicked")
     button.addEventListener("click", function() {
