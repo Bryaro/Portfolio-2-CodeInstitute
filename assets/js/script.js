@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function(){
 let buttons = document.getElementsByClassName("control");
 let playerScore = document.getElementById("player-score");
 let computerScore = document.getElementById("computer-score");
@@ -15,7 +16,6 @@ for (let button of buttons) {
     });
 }
 
-
 function letsPlay(playerOption) {
     console.log("letsplay")
     playerImage[0].src = `assets/images/${handSymbol[playerOption]}.jpg`;
@@ -30,7 +30,6 @@ function letsPlay(playerOption) {
 
     updateScores(result);
 }
-
 
 function winner(playerOption, computerOption) {
     console.log("winner")
@@ -64,3 +63,5 @@ function updateScores(result) {
 }
 
 console.log("test")
+
+});
