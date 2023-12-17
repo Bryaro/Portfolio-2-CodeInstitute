@@ -34,7 +34,6 @@ h1 {
 }
 
 .game-area {
-    display: block;
     text-align: center;
     padding: 2em 0;
     flex-grow: 2;
@@ -74,29 +73,6 @@ h1 {
     font-size: 110%;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
-.social-container {
-    list-style: none;
-    padding: 0;
-}
-
-.social-icons {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-.copy-right {
-    margin-top: 1em;
-    font-size: 0.8em;
-}
-
 #modal {
     display: none;
     position: fixed;
@@ -121,6 +97,28 @@ footer {
     font-weight: bolder;
 }
 
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.social-container {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.copy-right {
+    margin-top: 1em;
+    font-size: 0.8em;
+}
 /* Media Queries for Responsive Design on screen sizes over 768px */
 @media screen and (min-width: 768px) {
     .control {
