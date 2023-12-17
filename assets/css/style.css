@@ -34,6 +34,9 @@ h1 {
 }
 
 .game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 2em 0;
     flex-grow: 2;
@@ -41,6 +44,13 @@ h1 {
 
 .game-area div {
     margin-bottom: 1em;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 10px;
 }
 
 .control {
