@@ -8,6 +8,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -88,6 +93,30 @@ footer {
 .copy-right {
     margin-top: 1em;
     font-size: 0.8em;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.rule-content {
+    margin: 20% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color:black;
+    float: right;
+    font-size: 30px;
+    font-weight: bolder;
 }
 
 /* Media Queries for Responsive Design on screen sizes over 768px */
