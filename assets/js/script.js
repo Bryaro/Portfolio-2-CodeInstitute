@@ -1,3 +1,4 @@
+let sectionArea = document.getElementsByClassName("game-area")[0];
 let buttons = document.getElementsByClassName("control");
 let playerScore = document.getElementById("player-score");
 let computerScore = document.getElementById("computer-score");
@@ -5,7 +6,6 @@ let playerImage = document.getElementsByClassName("player-image");
 let computerImage = document.getElementsByClassName("computer-image");
 let message = document.getElementById("message");
 let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
-
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -23,23 +23,28 @@ document.addEventListener("DOMContentLoaded", function(){
     for (let playBtn of playBtns) {
         console.log("play btns for loop");
         playBtn.addEventListener("click", function(){
-            if (this.innerHTML === "RULES") {
+            // PLAY EASY
+            if (this.innerHTML === "PLAY EASY") {
+                console.log("PLAY EASY BTN CLICKED!")
+                sectionArea.innerHTML = 
+                menu.style.display = "none";
+            }
+
+            // RULES
+            else if (this.innerHTML === "RULES") {
                 console.log("rule btn clicked, ready to put html")
-                let sectionArea = document.getElementsByClassName("game-area")[0];
                 sectionArea.innerHTML = rulesHTML;
                 menu.style.display = "none";
-                sectionArea.style.width = "50%";
                 sectionArea.style.alignSelf = "center";
 
-
                 window.onclick = function(event) {
-                    if (event.target == rulesModal) {
-                        console.log("modal out clicked!")
+                    //ill put rules element here when rule btn clicked
+                    if (event.target == sectionArea ) {
+                        console.log("remove modal was clicked")
                         let rulesModal = document.getElementById("rulesModal");
                         rulesModal.style.display = "none";
                     }
                 }
-                //ill put rules element here when rule btn clicked
             } else {
                 // menu.style.display = "none";
             }
