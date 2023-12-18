@@ -64,7 +64,7 @@ h1 {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
-    transition: background-color 1s;
+    transition:1s;
 }
 
 .control:hover {
@@ -105,8 +105,9 @@ h1 {
 
 .close:hover, button:hover {
     cursor: pointer;
+    background-color: slateblue;
+    transition: 0.7s;
 }
-
 
 footer {
     background-color: #333;
