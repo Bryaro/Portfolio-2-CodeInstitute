@@ -1,3 +1,11 @@
+let buttons = document.getElementsByClassName("control");
+let playerScore = document.getElementById("player-score");
+let computerScore = document.getElementById("computer-score");
+let playerImage = document.getElementsByClassName("player-image");
+let computerImage = document.getElementsByClassName("computer-image");
+let message = document.getElementById("message");
+let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
+
 document.addEventListener("DOMContentLoaded", function(){
 
     let menu = document.getElementById("menu");
@@ -15,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function(){
         console.log("play btns for loop");
         playBtn.addEventListener("click", function(){
             if (this.innerHTML === "RULES") {
+                console.log("rule btn clicked, ready to put html")
                 //ill put rules element here when rule btn clicked
             } else {
                 // menu.style.display = "none";
@@ -24,14 +33,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
 });
-
-let buttons = document.getElementsByClassName("control");
-let playerScore = document.getElementById("player-score");
-let computerScore = document.getElementById("computer-score");
-let playerImage = document.getElementsByClassName("player-image");
-let computerImage = document.getElementsByClassName("computer-image");
-let message = document.getElementById("message");
-let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
 
 for (let button of buttons) {
     console.log("button was clicked")
