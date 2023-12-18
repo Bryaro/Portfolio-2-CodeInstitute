@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function(){
         playBtn.addEventListener("click", function(){
             if (this.innerHTML === "RULES") {
                 console.log("rule btn clicked, ready to put html")
+                let sectionArea = document.getElementsByClassName("game-area")[0];
+                sectionArea.innerHTML = rulesHTML;
+                menu.style.display = "none";
                 //ill put rules element here when rule btn clicked
             } else {
                 // menu.style.display = "none";
