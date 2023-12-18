@@ -14,7 +14,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
 
     let rulesHTML = `<div id="rulesModal" class="modal">
                         <a class="close" href="index.html">
-                            <button class="closeModalBtn">X</button>
+                            <button id="closeModalBtn">X</button>
                         </a>
                     </div>`;
     // let closeButton = document.getElementsByClassName("close")[0];

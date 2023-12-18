@@ -81,6 +81,11 @@ h1 {
     display: flex;
 }
 
+#closeModalBtn {
+    position: relative;
+    left: 137px;
+}
+
 /* .rule-content {
     margin: 20% auto;
     padding: 20px;
@@ -89,7 +94,7 @@ h1 {
 } */
 
 .modal {
-    background: url(/assets/images/RoshomboRules.jpeg) no-repeat center/cover;
+    background: url(../images/RoshomboRules.jpeg) no-repeat center/cover;
     width: 300px;
     height: 300px;
 }
@@ -144,5 +149,10 @@ footer {
     display: inline-flex;
     width: 40%;
     margin-bottom: 0px;
+}
+
+#closeModalBtn {
+    position: relative;
+    left: 137px;
 }
 }
