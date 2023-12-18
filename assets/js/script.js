@@ -23,10 +23,11 @@ document.addEventListener("DOMContentLoaded", function(){
     for (let playBtn of playBtns) {
         console.log("play btns for loop");
         playBtn.addEventListener("click", function(){
-            // PLAY EASY
+            // PLAY HARD
             if (this.innerHTML === "PLAY EASY") {
                 console.log("PLAY EASY BTN CLICKED!")
-                sectionArea.innerHTML = 
+                sectionArea.innerHTML = playHardHTML;
+                sectionArea.style.display = "flow"
                 menu.style.display = "none";
             }
 
@@ -48,11 +49,13 @@ document.addEventListener("DOMContentLoaded", function(){
             } else {
                 // menu.style.display = "none";
             }
+            letsPlay(playerOption);
 
         });
     }
 
 });
+
 
 for (let button of buttons) {
     console.log("button was clicked")
