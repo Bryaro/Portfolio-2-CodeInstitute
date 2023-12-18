@@ -24,8 +24,18 @@ playBtns = document.getElementsByClassName("menu-buttons");
     for (let playBtn of playBtns) {
         console.log("play btns for loop");
         playBtn.addEventListener("click", function(){
+            // PLAY EASY
+            if (this.innerHTML === "PLAY EASY") {
+                sectionArea.innerHTML = playEasyHTML;
+                sectionArea.style.display = "flow"
+                menu.style.display = "none";
+
+                buttons = document.getElementsByClassName("control");
+                functionPlayHardBtns();
+                updateScores(result);
+            }
             // PLAY HARD
-            if (this.innerHTML === "PLAY HARD") {
+            else if (this.innerHTML === "PLAY HARD") {
                 console.log("PLAY HARD BTN CLICKED!")
                 sectionArea.innerHTML = playHardHTML;
                 sectionArea.style.display = "flow"
