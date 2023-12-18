@@ -53,10 +53,14 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 menu.style.display = "none";
                 sectionArea.style.alignSelf = "center";
 
+                let closeBtn = document.getElementsByClassName("close")[0];
+
                 window.onclick = function(event) {
                     //ill put rules element here when rule btn clicked
                     if (event.target == sectionArea ) {
                         console.log("remove modal was clicked")
+                        rulesModal.style.display = "none";
+                    } else if (event.target == closeBtn) {
                         rulesModal.style.display = "none";
                     }
                 }
