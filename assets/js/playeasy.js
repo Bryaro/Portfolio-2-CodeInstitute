@@ -14,5 +14,7 @@ playEasyHTML = `<div>
     <h2 class="scores">Computers-score is: <span id="computer-score">0</span></h2>
     <img class="computer-image" src="assets/images/computer-head.jpg" alt="hands">
 </div>
-<button>Quit</button>
+</div>
+<div>
+    <button>Quit</button>
 </div>`;

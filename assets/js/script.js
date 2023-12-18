@@ -47,7 +47,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
-                functionPlayHardBtns();
+                functionPlayHardBtns(); 
             }
 
             // RULES
@@ -132,23 +132,23 @@ function updateScores(result) {
     }
 }
 
-let ruleBtn = document.getElementById("rulesBtn");
-let modal = document.getElementById("modal");
-let span = document.getElementsByClassName("close")[0];
+// let ruleBtn = document.getElementById("rulesBtn");
+// let modal = document.getElementById("modal");
+// let span = document.getElementsByClassName("close")[0];
 
-ruleBtn.addEventListener("click", function() {
-    console.log("ruleBtn works")
-    modal.style.display = "block";
-});
+// ruleBtn.addEventListener("click", function() {
+//     console.log("ruleBtn works")
+//     modal.style.display = "block";
+// });
 
-span.addEventListener("click", function(){
-    console.log("display none works on span")
-    span.style.display = "none";
-});
+// span.addEventListener("click", function(){
+//     console.log("display none works on span")
+//     span.style.display = "none";
+// });
 
-window.addEventListener("click", function(event) {
-    console.log("window click works")
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-});
+// window.addEventListener("click", function(event) {
+//     console.log("window click works")
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// });
