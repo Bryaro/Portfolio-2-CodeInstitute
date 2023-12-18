@@ -96,12 +96,12 @@ h1 {
     height: 300px;
 }
 
-/* .close {
-    color:black;
-    float: right;
-    font-size: 30px;
+.close {
+    position: relative;
+    left: 135px;
+    font-size: 150%;
     font-weight: bolder;
-} */
+}
 
 footer {
     background-color: #333;
