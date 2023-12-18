@@ -90,6 +90,10 @@ h1 {
     max-width: 500px;
 } */
 
+.modal {
+    background: url(/assets/images/RoshomboRules.jpeg);
+}
+
 /* .close {
     color:black;
     float: right;

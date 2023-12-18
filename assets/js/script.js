@@ -13,11 +13,8 @@ let menu = document.getElementById("menu");
 playBtns = document.getElementsByClassName("menu-buttons");
 
     let rulesHTML = `<div id="rulesModal" class="modal">
-                        <div class="modal-content">
                             <span class="close">&times;</span>
                             <h2>Game Rules</h2>
-                            <img class="rules-image" src="assets/images/RoshomboRules.jpeg" alt="rules-image">
-                        </div>
                     </div>`;
     // let closeButton = document.getElementsByClassName("close")[0];
 
@@ -52,7 +49,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
 
             // RULES
             else if (this.innerHTML === "RULES") {
-                console.log("rule btn clicked, ready to put html")
+                console.log("rule btn clicked")
                 sectionArea.innerHTML = rulesHTML;
                 menu.style.display = "none";
                 sectionArea.style.alignSelf = "center";
@@ -61,7 +58,6 @@ playBtns = document.getElementsByClassName("menu-buttons");
                     //ill put rules element here when rule btn clicked
                     if (event.target == sectionArea ) {
                         console.log("remove modal was clicked")
-                        let rulesModal = document.getElementById("rulesModal");
                         rulesModal.style.display = "none";
                     }
                 }
