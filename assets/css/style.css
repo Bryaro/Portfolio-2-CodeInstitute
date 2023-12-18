@@ -94,14 +94,14 @@ h1 {
     height: 300px;
 }
 
-.close {
+/* .close {
     position: relative;
     left: 135px;
     font-size: 150%;
     font-weight: bolder;
-}
+} */
 
-.close:hover, button:hover, .control:hover {
+button:hover, .control:hover {
     cursor: pointer;
     background-color: slateblue;
     transition: 0.7s;
