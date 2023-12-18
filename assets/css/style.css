@@ -46,7 +46,7 @@ h1 {
     margin-bottom: 1em;
 }
 
-.menu {
+#menu {
     display: flex;
     flex-direction: column;
     width: 200px;

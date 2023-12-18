@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", function(){
+
+let menu = document.getElementById("menu");
+playBtns = document.getElementsByClassName("menu-buttons");
+
+    for (let playBtn of playBtns) {
+        console.log("play btns for loop");
+        playBtn.addEventListener("click", function(){
+            menu.style.display = "none";
+        })
+    }
+
+});
+
 let buttons = document.getElementsByClassName("control");
 let playerScore = document.getElementById("player-score");
 let computerScore = document.getElementById("computer-score");
@@ -80,6 +93,4 @@ window.addEventListener("click", function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}) 
-
 });
