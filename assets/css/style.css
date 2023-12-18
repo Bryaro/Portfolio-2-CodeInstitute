@@ -68,14 +68,17 @@ h1 {
 }
 
 .computer-image, .player-image {
-    width: 200px;
-    border-radius: 15px;
+    width: 100%;
 }
 
 .scores {
     color: #333;
     font-weight: bold;
     font-size: 110%;
+}
+
+.player-computer-container {
+    display: flex;
 }
 
 /* .rule-content {
@@ -98,7 +101,7 @@ h1 {
     font-weight: bolder;
 }
 
-.close:hover, button:hover, .control:hover {
+.close:hover, button:hover, .control {
     cursor: pointer;
     background-color: slateblue;
     transition: 0.7s;
@@ -139,6 +142,7 @@ footer {
 
 .player-computer-container {
     display: inline-flex;
-    gap: 2em;
+    width: 40%;
+    margin-bottom: 0px;
 }
 }
