@@ -63,6 +63,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                     } else if (event.target == closeBtn) {
                         rulesModal.style.display = "none";
                     }
+                    return menu;
                 }
             } else {
                 // menu.style.display = "none";

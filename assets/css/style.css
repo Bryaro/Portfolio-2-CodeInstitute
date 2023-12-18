@@ -101,7 +101,7 @@ h1 {
     font-weight: bolder;
 }
 
-.close:hover, button:hover, .control {
+.close:hover, button:hover, .control:hover {
     cursor: pointer;
     background-color: slateblue;
     transition: 0.7s;

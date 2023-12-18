@@ -16,5 +16,5 @@ playEasyHTML = `<div>
 </div>
 </div>
 <div>
-    <button class="quitBtn">Quit</button>
+<a class="logo" href="index.html"><button class="quitBtn">Quit</button></a>
 </div>`;
