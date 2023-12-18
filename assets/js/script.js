@@ -1,10 +1,10 @@
 let sectionArea = document.getElementsByClassName("game-area")[0];
 let buttons = document.getElementsByClassName("control");
-let playerScore = document.getElementById("player-score");
-let computerScore = document.getElementById("computer-score");
+// let playerScore = document.getElementById("player-score");
+// let computerScore = document.getElementById("computer-score");
 let playerImage = document.getElementsByClassName("player-image");
 let computerImage = document.getElementsByClassName("computer-image");
-let message = document.getElementById("message");
+// let message = document.getElementById("message");
 let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -25,14 +25,14 @@ playBtns = document.getElementsByClassName("menu-buttons");
         console.log("play btns for loop");
         playBtn.addEventListener("click", function(){
             // PLAY EASY
-            if (this.innerHTML === "PLAY EASY") {
+            if (this.innerHTML === "PLAY EASY" ) {
                 sectionArea.innerHTML = playEasyHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
 
                 playerScore = document.getElementById("player-score");
                 computerScore = document.getElementById("computer-score");
-
+                message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
                 functionPlayHardBtns();
             }
@@ -43,6 +43,9 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
 
+                playerScore = document.getElementById("player-score");
+                computerScore = document.getElementById("computer-score");
+                message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
                 functionPlayHardBtns();
             }
@@ -73,7 +76,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
 
 function functionPlayHardBtns(){
     for (let button of buttons) {
-        console.log("button was clicked")
+        console.log("one menu button was clicked")
         button.addEventListener("click", function() {
             let playerOption = this.getAttribute("data-option");
             letsPlay(playerOption);
