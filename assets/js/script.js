@@ -13,7 +13,9 @@ let menu = document.getElementById("menu");
 playBtns = document.getElementsByClassName("menu-buttons");
 
     let rulesHTML = `<div id="rulesModal" class="modal">
-                            <span class="close">&times;</span>
+                        <a class="logo" href="index.html">
+                            <button class="quitBtn">Close</button>
+                        </a>
                     </div>`;
     // let closeButton = document.getElementsByClassName("close")[0];
 
@@ -50,7 +52,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
             else if (this.innerHTML === "RULES") {
                 console.log("rule btn clicked")
                 sectionArea.innerHTML = rulesHTML;
-                menu.style.display = "none";
+                // menu.style.display = "none";
                 sectionArea.style.alignSelf = "center";
 
                 let closeBtn = document.getElementsByClassName("close")[0];
@@ -63,7 +65,6 @@ playBtns = document.getElementsByClassName("menu-buttons");
                     } else if (event.target == closeBtn) {
                         rulesModal.style.display = "none";
                     }
-                    return menu;
                 }
             } else {
                 // menu.style.display = "none";
@@ -73,6 +74,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
     }
 
 });
+
 
 function functionPlayHardBtns(){
     for (let button of buttons) {
