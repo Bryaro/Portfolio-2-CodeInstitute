@@ -14,7 +14,6 @@ playBtns = document.getElementsByClassName("menu-buttons");
 
     let rulesHTML = `<div id="rulesModal" class="modal">
                             <span class="close">&times;</span>
-                            <h2>Game Rules</h2>
                     </div>`;
     // let closeButton = document.getElementsByClassName("close")[0];
 

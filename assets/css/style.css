@@ -91,7 +91,9 @@ h1 {
 } */
 
 .modal {
-    background: url(/assets/images/RoshomboRules.jpeg);
+    background: url(/assets/images/RoshomboRules.jpeg) no-repeat center/cover;
+    width: 300px;
+    height: 300px;
 }
 
 /* .close {
