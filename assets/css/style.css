@@ -67,11 +67,6 @@ h1 {
     transition:1s;
 }
 
-.control:hover {
-    background-color: #000000;
-    color: white;
-}
-
 .computer-image, .player-image {
     width: 200px;
     border-radius: 15px;
@@ -103,7 +98,7 @@ h1 {
     font-weight: bolder;
 }
 
-.close:hover, button:hover {
+.close:hover, button:hover, .control:hover {
     cursor: pointer;
     background-color: slateblue;
     transition: 0.7s;
