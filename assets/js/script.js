@@ -1,13 +1,20 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-let menu = document.getElementById("menu");
-playBtns = document.getElementsByClassName("menu-buttons");
+    let menu = document.getElementById("menu");
+    playBtns = document.getElementsByClassName("menu-buttons");
+    let rulesHTML = ``;
+    let closeButton = document.getElementsByClassName("close")[0];
 
     for (let playBtn of playBtns) {
         console.log("play btns for loop");
         playBtn.addEventListener("click", function(){
-            menu.style.display = "none";
-        })
+            if (this.innerHTML === "RULES") {
+                //ill put rules element here when rule btn clicked
+            } else {
+                // menu.style.display = "none";
+            }
+
+        });
     }
 
 });
