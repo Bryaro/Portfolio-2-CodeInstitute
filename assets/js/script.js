@@ -1,16 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(){
-
-let section = document.getElementsByClassName("game-area");
-section.style.display = "none";
-// let buttons = document.getElementsByClassName("control");
-// let playerScore = document.getElementById("player-score");
-// let computerScore = document.getElementById("computer-score");
-// let playerImage = document.getElementsByClassName("player-image");
-// let computerImage = document.getElementsByClassName("computer-image");
-// let message = document.getElementById("message");
-// let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
-
-});
+let buttons = document.getElementsByClassName("control");
+let playerScore = document.getElementById("player-score");
+let computerScore = document.getElementById("computer-score");
+let playerImage = document.getElementsByClassName("player-image");
+let computerImage = document.getElementsByClassName("computer-image");
+let message = document.getElementById("message");
+let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
 
 for (let button of buttons) {
     console.log("button was clicked")
@@ -85,4 +80,6 @@ window.addEventListener("click", function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}) 
+
 });
