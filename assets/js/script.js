@@ -9,8 +9,9 @@ let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
 
 document.addEventListener("DOMContentLoaded", function(){
 
-    let menu = document.getElementById("menu");
-    playBtns = document.getElementsByClassName("menu-buttons");
+let menu = document.getElementById("menu");
+playBtns = document.getElementsByClassName("menu-buttons");
+
     let rulesHTML = `<div id="rulesModal" class="modal">
                         <div class="modal-content">
                             <span class="close">&times;</span>
@@ -24,11 +25,15 @@ document.addEventListener("DOMContentLoaded", function(){
         console.log("play btns for loop");
         playBtn.addEventListener("click", function(){
             // PLAY HARD
-            if (this.innerHTML === "PLAY EASY") {
-                console.log("PLAY EASY BTN CLICKED!")
+            if (this.innerHTML === "PLAY HARD") {
+                console.log("PLAY HARD BTN CLICKED!")
                 sectionArea.innerHTML = playHardHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
+
+                buttons = document.getElementsByClassName("control");
+                functionPlayHardBtns();
+                updateScores(result);
             }
 
             // RULES
@@ -49,21 +54,23 @@ document.addEventListener("DOMContentLoaded", function(){
             } else {
                 // menu.style.display = "none";
             }
-            letsPlay(playerOption);
 
         });
     }
 
 });
 
-
-for (let button of buttons) {
-    console.log("button was clicked")
-    button.addEventListener("click", function() {
-        let playerOption = this.getAttribute("data-option");
-        letsPlay(playerOption);
-    });
+function functionPlayHardBtns(){
+    for (let button of buttons) {
+        console.log("button was clicked")
+        button.addEventListener("click", function() {
+            let playerOption = this.getAttribute("data-option");
+            letsPlay(playerOption);
+        });
+    }
 }
+
+
 
 function letsPlay(playerOption) {
     console.log("letsplay")

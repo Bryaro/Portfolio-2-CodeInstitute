@@ -121,10 +121,6 @@ footer {
 }
 /* Media Queries for Responsive Design on screen sizes over 768px */
 @media screen and (min-width: 768px) {
-
-    .rules-image {
-        width: 300px;
-    }
     .control {
         padding: 8px 16px;
         font-size: 14px;
