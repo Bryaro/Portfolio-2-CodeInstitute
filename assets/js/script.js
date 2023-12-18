@@ -30,9 +30,11 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
 
+                playerScore = document.getElementById("player-score");
+                computerScore = document.getElementById("computer-score");
+
                 buttons = document.getElementsByClassName("control");
                 functionPlayHardBtns();
-                updateScores(result);
             }
             // PLAY HARD
             else if (this.innerHTML === "PLAY HARD") {
@@ -43,7 +45,6 @@ playBtns = document.getElementsByClassName("menu-buttons");
 
                 buttons = document.getElementsByClassName("control");
                 functionPlayHardBtns();
-                updateScores(result);
             }
 
             // RULES
