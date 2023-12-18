@@ -2,7 +2,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
     let menu = document.getElementById("menu");
     playBtns = document.getElementsByClassName("menu-buttons");
-    let rulesHTML = ``;
+    let rulesHTML = `<div id="rulesModal" class ="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Game Rules</h2>
+                            <img class="rules-image" src="" alt="rules-image">
+                        </div>
+                    </div>`;
     let closeButton = document.getElementsByClassName("close")[0];
 
     for (let playBtn of playBtns) {
