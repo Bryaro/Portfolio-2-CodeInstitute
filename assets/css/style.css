@@ -103,6 +103,11 @@ h1 {
     font-weight: bolder;
 }
 
+.close:hover, button:hover {
+    cursor: pointer;
+}
+
+
 footer {
     background-color: #333;
     color: white;
