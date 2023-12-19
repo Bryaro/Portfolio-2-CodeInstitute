@@ -18,5 +18,5 @@ const playHardHTML = `<div>
 </div>
 </div>
 <div>
-<a class="logo" href="index.html"><button class="quitBtn">Quit</button></a>
+<a href="index.html"><button class="quitBtn">Quit</button></a>
 </div>`;
