@@ -67,7 +67,8 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 // menu.style.display = "none";
                 sectionArea.style.alignSelf = "center";
 
-                let closeBtn = document.getElementsByClassName("close")[0];
+                // let closeBtn = document.getElementsByClassName("close")[0];
+                let rulesModal = document.getElementById("rulesModal");
 
                 window.onclick = function(event) {
                     //ill put rules element here when rule btn clicked
@@ -76,7 +77,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                         rulesModal.style.display = "none";
                     } else if (event.target == closeBtn) {
                         rulesModal.style.display = "none";
-                    }
+                    } 
                 }
             } else {
                 // menu.style.display = "block";
