@@ -68,7 +68,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                     }
                 }
             } else {
-                // menu.style.display = "none";
+                // menu.style.display = "block";
             }
 
         });
