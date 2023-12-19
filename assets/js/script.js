@@ -34,7 +34,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
-                functionPlayHardBtns();
+                gameMode();
             }
             // PLAY HARD
             else if (this.innerHTML === "PLAY HARD") {
@@ -47,7 +47,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
-                functionPlayHardBtns(); 
+                gameMode(); 
             }
 
             // RULES
@@ -75,8 +75,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
         });
     }
 
-
-function gameMode(){
+function gameMode(isEasy){
     for (let button of buttons) {
         console.log("one menu button was clicked")
         button.addEventListener("click", function() {
@@ -86,15 +85,13 @@ function gameMode(){
     }
 }
 
-
-
 function letsPlay(playerOption) {
     console.log("letsplay")
     playerImage[0].src = `assets/images/${handSymbol[playerOption]}.jpg`;
     playerImage[0].alt = handSymbol[playerOption];
 
-    
-    let computerOption = Math.floor(Math.random() * 5);
+    let symbolArray = isEasy ? easySymbol : handSymbol;
+    let computerOption = Math.floor(Math.random() * symbolArray.length);
     
     computerImage[0].src = `assets/images/${handSymbol[computerOption]}.jpg`;
     computerImage[0].alt = handSymbol[computerOption];
