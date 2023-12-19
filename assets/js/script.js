@@ -38,7 +38,8 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 sectionArea.innerHTML = playEasyHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
-
+            // Can I make these a setupGame() to reuse since Im using it twice
+            // setupGame();
                 playerScore = document.getElementById("player-score");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
@@ -51,7 +52,8 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 sectionArea.innerHTML = playHardHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
-
+            // Can I make these a setupGame() to reuse since Im using it twice
+            // setpupGame();
                 playerScore = document.getElementById("player-score");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
@@ -83,6 +85,19 @@ playBtns = document.getElementsByClassName("menu-buttons");
 
         });
     }
+
+function setQuitBtns() {
+    console.log("quit btn clicked!")
+   let quitBtns = document.getElementsByClassName("quitBtn");
+   for (let quitBtn of quitBtns) {
+        quitBtn.addEventListener("clicl", function() {
+            if (confirm("Are you sure you want to quit?")) {
+                window.close();
+            }
+        })
+   }
+}
+
 
 function letsPlay(playerOption, isEasy) {
     console.log("letsplay")
@@ -152,6 +167,14 @@ function updateScores(result) {
      sectionArea.style.backgroundColor = "red";
     }
 }
+
+
+let quitBtn = document.getElementsByClassName("quitBtn");
+quitBtn.addEventListener("click", function() {
+    if (confirm("Are you sure you want to quit?")) {
+        window.close();
+    }
+})
 
 // let ruleBtn = document.getElementById("rulesBtn");
 // let modal = document.getElementById("modal");
