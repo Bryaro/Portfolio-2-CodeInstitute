@@ -8,7 +8,8 @@ let computerImage = document.getElementsByClassName("computer-image");
 let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
 let easySymbol = ["rock", "paper", "scissor"];
 
-document.addEventListener("DOMContentLoaded", function(){
+// document.addEventListener("DOMContentLoaded", function(){
+// });
 
 let menu = document.getElementById("menu");
 playBtns = document.getElementsByClassName("menu-buttons");
@@ -74,10 +75,8 @@ playBtns = document.getElementsByClassName("menu-buttons");
         });
     }
 
-});
 
-
-function functionPlayHardBtns(){
+function gameMode(){
     for (let button of buttons) {
         console.log("one menu button was clicked")
         button.addEventListener("click", function() {
