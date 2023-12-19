@@ -11,6 +11,7 @@ let easySymbol = ["rock", "paper", "scissor"];
 // document.addEventListener("DOMContentLoaded", function(){
 // });
 
+let menuBtn = document.getElementById("menuBtn");
 let menu = document.getElementById("menu");
 playBtns = document.getElementsByClassName("menu-buttons");
 
@@ -35,6 +36,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
         playBtn.addEventListener("click", function(){
             // PLAY EASY
             if (this.innerHTML === "PLAY EASY" ) {
+                menuBtn.style.display = "block";
                 sectionArea.innerHTML = playEasyHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
@@ -50,6 +52,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
             // PLAY HARD
             else if (this.innerHTML === "PLAY HARD") {
                 console.log("PLAY HARD BTN CLICKED!")
+                menuBtn.style.display = "block";
                 sectionArea.innerHTML = playHardHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
