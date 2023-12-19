@@ -21,6 +21,16 @@ playBtns = document.getElementsByClassName("menu-buttons");
                     </div>`;
     // let closeButton = document.getElementsByClassName("close")[0];
 
+    function gameMode(isEasy){
+        for (let button of buttons) {
+            console.log("one menu button was clicked")
+            button.addEventListener("click", function() {
+                let playerOption = this.getAttribute("data-option");
+                letsPlay(playerOption, isEasy);
+            });
+        }
+    }
+
     for (let playBtn of playBtns) {
         console.log("play btns for loop");
         playBtn.addEventListener("click", function(){
@@ -34,7 +44,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
-                gameMode();
+                gameMode(true);
             }
             // PLAY HARD
             else if (this.innerHTML === "PLAY HARD") {
@@ -47,7 +57,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
-                gameMode(); 
+                gameMode(false); 
             }
 
             // RULES
@@ -75,28 +85,18 @@ playBtns = document.getElementsByClassName("menu-buttons");
         });
     }
 
-function gameMode(isEasy){
-    for (let button of buttons) {
-        console.log("one menu button was clicked")
-        button.addEventListener("click", function() {
-            let playerOption = this.getAttribute("data-option");
-            letsPlay(playerOption);
-        });
-    }
-}
-
-function letsPlay(playerOption) {
+function letsPlay(playerOption, isEasy) {
     console.log("letsplay")
-    playerImage[0].src = `assets/images/${handSymbol[playerOption]}.jpg`;
-    playerImage[0].alt = handSymbol[playerOption];
-
     let symbolArray = isEasy ? easySymbol : handSymbol;
+    playerImage[0].src = `assets/images/${symbolArray[playerOption]}.jpg`;
+    playerImage[0].alt = symbolArray[playerOption];
+
     let computerOption = Math.floor(Math.random() * symbolArray.length);
     
-    computerImage[0].src = `assets/images/${handSymbol[computerOption]}.jpg`;
-    computerImage[0].alt = handSymbol[computerOption];
+    computerImage[0].src = `assets/images/${symbolArray[computerOption]}.jpg`;
+    computerImage[0].alt = symbolArray[computerOption];
 
-    let result = winner(handSymbol[playerOption], handSymbol[computerOption]);
+    let result = winner(symbolArray[playerOption], symbolArray[computerOption]);
 
     updateScores(result);
 }
