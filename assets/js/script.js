@@ -112,9 +112,9 @@ function winner(playerOption, computerOption) {
     (playerOption === "lizard" && (computerOption === "spock" || computerOption === "paper")) ||
     (playerOption === "spock" && (computerOption === "scissor" || computerOption === "rock"))) {
     return "player";
-}
+    } 
 
-return "computer";
+    return "computer";
 
 }
 
@@ -122,19 +122,29 @@ function updateScores(result) {
     console.log("updateScores")
     if (result === "player") {
         playerScore.textContent = parseInt(playerScore.textContent) + 1;
-        if (parseInt(playerScore.textContent) === 5) {
             message.textContent = "You win!";
-        } 
+
     } else if (result === "computer") {
         computerScore.textContent = parseInt(computerScore.textContent) + 1;
         if (parseInt(computerScore.textContent) === 5) {
-            message.textContent = "Computer wins!";
-            playerImage[0].style.display = "none";
-            computerImage[0].style.display = "none";
-
+            message.textContent = "Computer win!";
         }
     } else {
         message.textContent = "It's a draw!";
+    }
+
+    if (parseInt(playerScore.textContent) === 5) {
+        sectionArea.innerHTML = `<div class="victory-message">
+        <h1>VICTORY!</h1>
+        <button href="index.html">Back to Menu</button>
+     </div>`;
+     sectionArea.style.backgroundColor = "green";
+    } else if (parseInt(computerScore.textContent) === 5){
+        sectionArea.innerHTML = `<div class="victory-message">
+        <h1>GAME OVER!</h1>
+        <button href="index.html>Back to Menu</button>
+     </div>`;
+     sectionArea.style.backgroundColor = "red";
     }
 }
 

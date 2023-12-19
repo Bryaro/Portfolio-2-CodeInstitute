@@ -6,7 +6,7 @@ const playHardHTML = `<div>
 <button data-option="3" aria-label="lizard" class="control">Lizard</button>
 <button data-option="4" aria-label="spock" class="control">Spock</button>
 </div>
-<div id="message">Lets go!!</div>
+<div id="message"></div>
 <div class="player-computer-container">
 <div class="player">
     <h2 class="scores">My score: <span id="player-score">0</span></h2>

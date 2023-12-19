@@ -4,7 +4,7 @@ const playEasyHTML = `<div>
 <button data-option="1" aria-label="paper" class="control">Paper</button>
 <button data-option="2" aria-label="scissor" class="control">Scissors</button>
 </div>
-<div id="message">Lets go!!</div>
+<div id="message"></div>
 <div class="player-computer-container">
 <div class="player">
     <h2 class="scores">My score: <span id="player-score">0</span></h2>
