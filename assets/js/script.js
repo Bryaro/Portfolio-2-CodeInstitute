@@ -45,6 +45,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
                 gameMode(true);
+                setQuitBtns();
             }
             // PLAY HARD
             else if (this.innerHTML === "PLAY HARD") {
@@ -59,6 +60,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
                 gameMode(false); 
+                setQuitBtns();
             }
 
             // RULES
@@ -90,8 +92,8 @@ function setQuitBtns() {
     console.log("quit btn clicked!")
    let quitBtns = document.getElementsByClassName("quitBtn");
    for (let quitBtn of quitBtns) {
-        quitBtn.addEventListener("clicl", function() {
-            if (confirm("Are you sure you want to quit?")) {
+        quitBtn.addEventListener("click", function() {
+            if (confirm("This window will close, still quit?")) {
                 window.close();
             }
         })
@@ -169,12 +171,12 @@ function updateScores(result) {
 }
 
 
-let quitBtn = document.getElementsByClassName("quitBtn");
-quitBtn.addEventListener("click", function() {
-    if (confirm("Are you sure you want to quit?")) {
-        window.close();
-    }
-})
+// let quitBtn = document.getElementsByClassName("quitBtn");
+// quitBtn.addEventListener("click", function() {
+//     if (confirm("This website will quit, are you sure?")) {
+//         window.close();
+//     }
+// })
 
 // let ruleBtn = document.getElementById("rulesBtn");
 // let modal = document.getElementById("modal");
