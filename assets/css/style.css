@@ -53,6 +53,10 @@ h1 {
     gap: 10px;
 }
 
+#easyBtn, #hardBtn {
+    height: 50px;
+}
+
 .control {
     background-color:white;
     color: black;

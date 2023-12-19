@@ -6,6 +6,7 @@ let playerImage = document.getElementsByClassName("player-image");
 let computerImage = document.getElementsByClassName("computer-image");
 // let message = document.getElementById("message");
 let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
+let easySymbol = ["rock", "paper", "scissor"];
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -93,8 +94,9 @@ function letsPlay(playerOption) {
     playerImage[0].src = `assets/images/${handSymbol[playerOption]}.jpg`;
     playerImage[0].alt = handSymbol[playerOption];
 
+    
     let computerOption = Math.floor(Math.random() * 5);
-
+    
     computerImage[0].src = `assets/images/${handSymbol[computerOption]}.jpg`;
     computerImage[0].alt = handSymbol[computerOption];
 

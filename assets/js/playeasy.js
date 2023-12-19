@@ -1,4 +1,4 @@
-playEasyHTML = `<div>
+const playEasyHTML = `<div>
 <p>Decide your option:</p>
 <button data-option="0" aria-label="rock" class="control">Rock</button>
 <button data-option="1" aria-label="paper" class="control">Paper</button>
