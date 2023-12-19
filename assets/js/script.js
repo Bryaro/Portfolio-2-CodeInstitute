@@ -19,7 +19,6 @@ playBtns = document.getElementsByClassName("menu-buttons");
                             <button id="closeModalBtn">X</button>
                         </a>
                     </div>`;
-    // let closeButton = document.getElementsByClassName("close")[0];
 
     function gameMode(isEasy){
         for (let button of buttons) {
@@ -68,17 +67,16 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 sectionArea.style.alignSelf = "center";
 
                 // let closeBtn = document.getElementsByClassName("close")[0];
-                let rulesModal = document.getElementById("rulesModal");
+                // let rulesModal = document.getElementById("rulesModal");
 
-                window.onclick = function(event) {
-                    //ill put rules element here when rule btn clicked
-                    if (event.target == sectionArea ) {
-                        console.log("remove modal was clicked")
-                        rulesModal.style.display = "none";
-                    } else if (event.target == closeBtn) {
-                        rulesModal.style.display = "none";
-                    } 
-                }
+                // window.onclick = function(event) {
+                //     //ill put rules element here when rule btn clicked
+                //     if (event.target == sectionArea ) {
+                //         console.log("remove modal was clicked")
+                //         rulesModal.style.display = "none";
+                //         menu.style.display = "block";
+                //     } 
+                // }
             } else {
                 // menu.style.display = "block";
             }
@@ -124,10 +122,17 @@ function updateScores(result) {
     console.log("updateScores")
     if (result === "player") {
         playerScore.textContent = parseInt(playerScore.textContent) + 1;
-        message.textContent = "You win!";
+        if (parseInt(playerScore.textContent) === 5) {
+            message.textContent = "You win!";
+        } 
     } else if (result === "computer") {
         computerScore.textContent = parseInt(computerScore.textContent) + 1;
-        message.textContent = "Computer wins!";
+        if (parseInt(computerScore.textContent) === 5) {
+            message.textContent = "Computer wins!";
+            playerImage[0].style.display = "none";
+            computerImage[0].style.display = "none";
+
+        }
     } else {
         message.textContent = "It's a draw!";
     }
