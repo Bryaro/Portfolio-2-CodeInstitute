@@ -16,5 +16,5 @@ const playEasyHTML = `<div>
 </div>
 </div>
 <div>
-<a href="index.html"><button class="quitBtn">Quit</button></a>
+<a><button class="quitBtn">Quit</button></a>
 </div>`;
