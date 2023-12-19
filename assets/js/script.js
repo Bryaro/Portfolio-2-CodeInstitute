@@ -136,13 +136,18 @@ function updateScores(result) {
     if (parseInt(playerScore.textContent) === 5) {
         sectionArea.innerHTML = `<div class="victory-message">
         <h1>VICTORY!</h1>
-        <button href="index.html">Back to Menu</button>
+        <a href="index.html">
+        <button>Back to Menu</button>
+        </a>
      </div>`;
-     sectionArea.style.backgroundColor = "green";
+     sectionArea.style.backgroundColor = "Green";
+
     } else if (parseInt(computerScore.textContent) === 5){
         sectionArea.innerHTML = `<div class="victory-message">
         <h1>GAME OVER!</h1>
-        <button href="index.html>Back to Menu</button>
+        <a href="index.html">
+        <button>Back to Menu</button>
+        </a>
      </div>`;
      sectionArea.style.backgroundColor = "red";
     }
