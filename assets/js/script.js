@@ -171,6 +171,10 @@ function updateScores(result) {
 }
 
 let resetBtn = document.getElementById("resetBtn");
+let modalRest = document.getElementById("confirmationModal");
+let CofirmBtn = document.getElementById("confirmBtn");
+let cancelBtn = document.getAnimations("cancelBtn");
+
 resetBtn.addEventListener("click", function() {
     window.location.reload();
 })
