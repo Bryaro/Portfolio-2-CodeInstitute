@@ -8,6 +8,7 @@ let modalBtn = document.getElementById("modalBtn");
 let modalContainer = document.getElementById("modal-container");
 let span = document.getElementsByClassName("close")[0];
 let menu = document.getElementById("menu");
+let hoverSound = new Audio('/assets/sounds/start-13691.mp3');
 
 function openModal() {
     modalContainer.style.display = "block";
@@ -34,6 +35,9 @@ playBtns = document.getElementsByClassName("menu-buttons");
     }
 
     for (let playBtn of playBtns) {
+        playBtn.addEventListener('mouseenter', function() {
+            hoverSound.play();
+        });
         console.log("play btns for loop");
         playBtn.addEventListener("click", function(){
         // PLAY EASY
@@ -67,7 +71,6 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 gameMode(false); 
                 // setQuitBtns();
             }
-
         // RULES
             else if (this.innerHTML === "RULES") {
                 console.log("rule btn clicked")
@@ -189,6 +192,8 @@ confirmBtn.addEventListener("click", function(){
 cancelBtn.addEventListener("click", function() {
     modalRest.style.display = "none";
 })
+
+
 
 // window.addEventListener(function(event){
 //     if (event.target == modalRest) {
