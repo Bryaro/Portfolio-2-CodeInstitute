@@ -15,8 +15,4 @@ const playHardHTML = `<div>
 <div class="computer-player">
     <h2 class="scores">His score: <span id="computer-score">0</span></h2>
     <img class="computer-image" src="assets/images/computer-head.jpg" alt="hands">
-</div>
-</div>
-<div>
-    <button class="quitBtn">QUIT</button>
 </div>`;

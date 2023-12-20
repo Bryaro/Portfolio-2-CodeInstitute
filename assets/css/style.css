@@ -53,13 +53,13 @@ h1 {
     gap: 10px;
 }
 
-nav {
+/* nav {
     align-self: flex-end;
-}
+} */
 
-#menuBtn {
+/* #menuBtn {
     display: none;
-}
+} */
 
 #easyBtn, #hardBtn {
     height: 50px;
@@ -93,9 +93,9 @@ nav {
     display: flex;
 }
 
-#closeModalBtn {
-    position: relative;
-    left: 137px;
+.reset {
+    width: 100px;
+    align-self: center;
 }
 
 /* .rule-content {

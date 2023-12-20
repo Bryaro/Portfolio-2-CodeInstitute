@@ -36,41 +36,37 @@ playBtns = document.getElementsByClassName("menu-buttons");
     for (let playBtn of playBtns) {
         console.log("play btns for loop");
         playBtn.addEventListener("click", function(){
-            // PLAY EASY
+        // PLAY EASY
             if (this.innerHTML === "PLAY EASY" ) {
                 sectionArea.innerHTML = playEasyHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
-            // Can I make these a setupGame() to reuse since Im using it twice
-            // setupGame();
+                // Can I make these a setupGame() to reuse since Im using it twice
+                // setupGame();
                 playerScore = document.getElementById("player-score");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
                 gameMode(true);
-                setQuitBtns();
+                // setQuitBtns();
             }
-            // PLAY HARD
+        // PLAY HARD
             else if (this.innerHTML === "PLAY HARD") {
                 console.log("PLAY HARD BTN CLICKED!")
                 sectionArea.innerHTML = playHardHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
-            // Can I make these a setupGame() to reuse since Im using it twice
-            // setpupGame();
+                // Can I make these a setupGame() to reuse since Im using it twice
+                // setpupGame();
                 playerScore = document.getElementById("player-score");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
                 gameMode(false); 
-                setQuitBtns();
-            }   
-            // QUIT BTNS
-            else if (this.innerHTML === "QUIT") {
-                console.log("QUIT BTN CLICKED!")
+                // setQuitBtns();
             }
 
-            // // RULES
+        // RULES
             else if (this.innerHTML === "RULES") {
                 console.log("rule btn clicked")
                 modalContainer.innerHTML = `<div class="modal-content" id="modal-content">
@@ -83,25 +79,25 @@ playBtns = document.getElementsByClassName("menu-buttons");
         });
     }
     
-function setQuitBtns() {
-    console.log("function quit BUTTONS running!")
-   let quitBtns = document.getElementsByClassName("quitBtn");
-   for (let quitBtn of quitBtns) {
-        quitBtn.addEventListener("click", function() {
-            console.log("playeasy Quit Btn clicked!")
-            modalContainer.innerHTML = `    <section class="game-area">
-            <div id="menu">
-                <button id="easyBtn" class="menu-buttons">PLAY EASY</button>
-                <button id="hardBtn" class="menu-buttons">PLAY HARD</button> 
-                <button class="menu-buttons" id="modalBtn">RULES</button>
-                <button class="menu-buttons">SETTINGS</button>
-            </div>
-            </section>
-            `;
-            sectionArea.innerHTML = modalContainer.innerHTML;
-        })
-   }
-}
+// function setQuitBtns() {
+//     console.log("function quit BUTTONS running!")
+//    let quitBtns = document.getElementsByClassName("quitBtn");
+//    for (let quitBtn of quitBtns) {
+//         quitBtn.addEventListener("click", function() {
+//             console.log("playeasy Quit Btn clicked!")
+//             modalContainer.innerHTML = `    <section class="game-area">
+//             <div id="menu">
+//                 <button id="easyBtn" class="menu-buttons">PLAY EASY</button>
+//                 <button id="hardBtn" class="menu-buttons">PLAY HARD</button> 
+//                 <button class="menu-buttons" id="modalBtn">RULES</button>
+//                 <button class="menu-buttons">SETTINGS</button>
+//             </div>
+//             </section>
+//             `;
+//             sectionArea.innerHTML = modalContainer.innerHTML;
+//         })
+//    }
+// }
 
 
 function letsPlay(playerOption, isEasy) {
@@ -172,6 +168,11 @@ function updateScores(result) {
      sectionArea.style.backgroundColor = "red";
     }
 }
+
+let resetBtn = document.getElementById("resetBtn");
+resetBtn.addEventListener("click", function() {
+    window.location.reload();
+})
 
 
 // let quitBtn = document.getElementsByClassName("quitBtn");
