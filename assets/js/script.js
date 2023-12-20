@@ -8,7 +8,7 @@ let modalBtn = document.getElementById("modalBtn");
 let modalContainer = document.getElementById("modal-container");
 let span = document.getElementsByClassName("close")[0];
 let menu = document.getElementById("menu");
-let hoverSound = new Audio('/assets/sounds/start-13691.mp3');
+let hoverSound = new Audio('assets/sounds/start-13691.mp3');
 
 function openModal() {
     modalContainer.style.display = "block";
