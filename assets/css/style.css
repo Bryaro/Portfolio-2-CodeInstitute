@@ -105,11 +105,11 @@ nav {
     max-width: 500px;
 } */
 
-.modal {
+/* .modal {
     background: url(../images/RoshomboRules.jpeg) no-repeat center/cover;
     width: 300px;
     height: 300px;
-}
+} */
 
 /* .close {
     position: relative;
@@ -172,15 +172,15 @@ footer {
 /* modal test */
 /* The Modal container  */
 #modal-container {
-    display: none; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    z-index: 100; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    position: absolute;
+    z-index: 100;
+    padding-top: 100px; 
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: scraoll; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: scraoll;
+    background-color: rgba(0,0,0,0.4);
   }
   
   /* Modal Content */

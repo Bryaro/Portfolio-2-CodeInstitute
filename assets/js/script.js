@@ -7,9 +7,6 @@ let easySymbol = ["rock", "paper", "scissor"];
 let modalBtn = document.getElementById("modalBtn");
 let modalContainer = document.getElementById("modal-container");
 let span = document.getElementsByClassName("close")[0];
-
-
-let menuBtn = document.getElementById("menuBtn");
 let menu = document.getElementById("menu");
 
 function openModal() {
@@ -44,7 +41,6 @@ playBtns = document.getElementsByClassName("menu-buttons");
         playBtn.addEventListener("click", function(){
             // PLAY EASY
             if (this.innerHTML === "PLAY EASY" ) {
-                menuBtn.style.display = "block";
                 sectionArea.innerHTML = playEasyHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
@@ -60,7 +56,6 @@ playBtns = document.getElementsByClassName("menu-buttons");
             // PLAY HARD
             else if (this.innerHTML === "PLAY HARD") {
                 console.log("PLAY HARD BTN CLICKED!")
-                menuBtn.style.display = "block";
                 sectionArea.innerHTML = playHardHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
@@ -72,14 +67,18 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 buttons = document.getElementsByClassName("control");
                 gameMode(false); 
                 setQuitBtns();
+            }   
+            // QUIT BTNS
+            else if (this.innerHTML === "QUIT") {
+                console.log("QUIT BTN CLICKED!")
             }
 
             // // RULES
             else if (this.innerHTML === "RULES") {
                 console.log("rule btn clicked")
-                modalContainer.innerHTML = `            <div class="modal-content" id="modal-content">
+                modalContainer.innerHTML = `<div class="modal-content" id="modal-content">
                 <span class="close">&times;</span>
-                <p>will place here text or image for rules</p>
+                <p><img class="computer-image" src="assets/images/RoshomboRules.jpeg" alt="rules"></p>
             </div>
         </div>`
                 // sectionArea.innerHTML = rulesHTML;
@@ -90,15 +89,23 @@ playBtns = document.getElementsByClassName("menu-buttons");
 
         });
     }
-
+    
 function setQuitBtns() {
-    console.log("quit btn clicked!")
+    console.log("function quit BUTTONS running!")
    let quitBtns = document.getElementsByClassName("quitBtn");
    for (let quitBtn of quitBtns) {
         quitBtn.addEventListener("click", function() {
-            if (confirm("This window will close, still quit?")) {
-                window.close();
-            }
+            console.log("playeasy Quit Btn clicked!")
+            modalContainer.innerHTML = `    <section class="game-area">
+            <div id="menu">
+                <button id="easyBtn" class="menu-buttons">PLAY EASY</button>
+                <button id="hardBtn" class="menu-buttons">PLAY HARD</button> 
+                <button class="menu-buttons" id="modalBtn">RULES</button>
+                <button class="menu-buttons">SETTINGS</button>
+            </div>
+            </section>`;
+            sectionArea.innerHTML = modalContainer.innerHTML;
+            gameMode();
         })
    }
 }
@@ -172,6 +179,9 @@ function updateScores(result) {
      sectionArea.style.backgroundColor = "red";
     }
 }
+
+
+
 
 // let quitBtn = document.getElementsByClassName("quitBtn");
 // quitBtn.addEventListener("click", function() {
