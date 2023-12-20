@@ -158,6 +158,7 @@ function updateScores(result) {
         </a>
      </div>`;
      sectionArea.style.backgroundColor = "Green";
+     resetBtn.style.display = "none";
 
     } else if (parseInt(computerScore.textContent) === 5){
         sectionArea.innerHTML = `<div class="victory-message">
@@ -167,23 +168,33 @@ function updateScores(result) {
         </a>
      </div>`;
      sectionArea.style.backgroundColor = "red";
+     resetBtn.style.display = "none";
     }
 }
 
 let resetBtn = document.getElementById("resetBtn");
 let modalRest = document.getElementById("confirmationModal");
-let CofirmBtn = document.getElementById("confirmBtn");
-let cancelBtn = document.getAnimations("cancelBtn");
+let confirmBtn = document.getElementById("confirmBtn");
+let cancelBtn = document.getElementById("cancelBtn");
 
 
-resetBtn.addEventListener("click", function() {
+resetBtn.addEventListener("click", function(){
     modalRest.style.display = "block";
 });
 
-CofirmBtn.addEventListener("click", function(){
+confirmBtn.addEventListener("click", function(){
     window.location.reload();
 })
 
+cancelBtn.addEventListener("click", function() {
+    modalRest.style.display = "none";
+})
+
+// window.addEventListener(function(event){
+//     if (event.target == modalRest) {
+//         modalRest.style.display = "none";
+//     }
+// })
 
 // let quitBtn = document.getElementsByClassName("quitBtn");
 // quitBtn.addEventListener("click", function() {
