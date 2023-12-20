@@ -125,7 +125,7 @@ button:hover, .control:hover {
 }
 
 /* The Modal container  */
-#modal-container {
+#modal-container, #confirmationModal {
     display: none;
     position: absolute;
     z-index: 100;

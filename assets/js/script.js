@@ -47,6 +47,7 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
+                message.textContent = "Lets go!";
                 gameMode(true);
                 // setQuitBtns();
             }
@@ -56,12 +57,13 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 sectionArea.innerHTML = playHardHTML;
                 sectionArea.style.display = "flow"
                 menu.style.display = "none";
-                // Can I make these a setupGame() to reuse since Im using it twice
-                // setpupGame();
+            // Can I make these a setupGame() to reuse since Im using it twice
+            // setpupGame();
                 playerScore = document.getElementById("player-score");
                 computerScore = document.getElementById("computer-score");
                 message = document.getElementById("message");
                 buttons = document.getElementsByClassName("control");
+                message.textContent = "Lets go!";
                 gameMode(false); 
                 // setQuitBtns();
             }
@@ -98,7 +100,6 @@ playBtns = document.getElementsByClassName("menu-buttons");
 //         })
 //    }
 // }
-
 
 function letsPlay(playerOption, isEasy) {
     console.log("letsplay")
