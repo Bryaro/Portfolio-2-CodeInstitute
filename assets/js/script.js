@@ -23,9 +23,6 @@ span.addEventListener("click", closeModal);
 
 playBtns = document.getElementsByClassName("menu-buttons");
 
-    // let rulesHTML = `<div id="rulesModal" class="modal">
-    //                 </div>`;
-
     function gameMode(isEasy){
         for (let button of buttons) {
             console.log("one menu button was clicked")
@@ -78,13 +75,9 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 console.log("rule btn clicked")
                 modalContainer.innerHTML = `<div class="modal-content" id="modal-content">
                 <span class="close">&times;</span>
-                <p><img class="computer-image" src="assets/images/RoshomboRules.jpeg" alt="rules"></p>
+                <p><img class="rules-image" src="assets/images/RoshomboRules.jpeg" alt="rules"></p>
             </div>
         </div>`
-                // sectionArea.innerHTML = rulesHTML;
-                // sectionArea.style.alignSelf = "center";
-                
-
             }
 
         });
@@ -103,9 +96,9 @@ function setQuitBtns() {
                 <button class="menu-buttons" id="modalBtn">RULES</button>
                 <button class="menu-buttons">SETTINGS</button>
             </div>
-            </section>`;
+            </section>
+            `;
             sectionArea.innerHTML = modalContainer.innerHTML;
-            gameMode();
         })
    }
 }
@@ -179,8 +172,6 @@ function updateScores(result) {
      sectionArea.style.backgroundColor = "red";
     }
 }
-
-
 
 
 // let quitBtn = document.getElementsByClassName("quitBtn");

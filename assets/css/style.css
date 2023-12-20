@@ -124,6 +124,47 @@ button:hover, .control:hover {
     transition: 0.7s;
 }
 
+/* The Modal container  */
+#modal-container {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    padding-top: 100px; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scraoll;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid black;
+    width: 70%;
+    margin-top: 20%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: darkgray;
+    float: right;
+    font-size: 28px;
+    font-weight: bolder;
+  }
+  
+  .close:hover {
+    color: #000;
+    cursor: pointer;
+  }
+
+  .rules-image {
+    max-width: 70%;
+    max-height: 70%;
+}
+
 footer {
     background-color: #333;
     color: white;
@@ -146,6 +187,16 @@ footer {
     margin-top: 1em;
     font-size: 0.8em;
 }
+
+
+@media screen and (min-width: 425px) {
+
+    .modal-content {
+        width: 60%;
+        margin-top: 30px;
+    }
+
+}
 /* Media Queries for Responsive Design on screen sizes over 768px */
 @media screen and (min-width: 768px) {
     .control {
@@ -157,50 +208,28 @@ footer {
         width: 200px;
     }
 
-.player-computer-container {
+    .player-computer-container {
     display: inline-flex;
     width: 40%;
     margin-bottom: 0px;
+    }
+
+    .modal-content {
+        width: 40%;
+        margin-top: 30px;
+    }
+
 }
 
-#closeModalBtn {
-    position: relative;
-    left: 137px;
-}
-}
 
-/* modal test */
-/* The Modal container  */
-#modal-container {
-    display: none;
-    position: absolute;
-    z-index: 100;
-    padding-top: 100px; 
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: scraoll;
-    background-color: rgba(0,0,0,0.4);
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: white;
-    margin: auto;
-    padding: 10px;
-    border: 1px solid black;
-    width: 50%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: darkgray;
-    float: right;
-    font-size: 28px;
-    font-weight: bolder;
-  }
-  
-  .close:hover {
-    color: #000;
-    cursor: pointer;
-  }
+@media screen and (min-width: 1024px) {
+    .modal-content {
+        height: 50%;
+        margin-top: 20px;
+    }
+
+    .rules-image {
+        width: 50%;
+        max-height: 50%;
+    }
+}
