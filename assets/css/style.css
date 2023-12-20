@@ -53,6 +53,10 @@ h1 {
     gap: 10px;
 }
 
+nav {
+    align-self: flex-end;
+}
+
 #menuBtn {
     display: none;
 }
@@ -164,3 +168,39 @@ footer {
     left: 137px;
 }
 }
+
+/* modal test */
+/* The Modal container  */
+#modal-container {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: scraoll; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid black;
+    width: 50%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: darkgray;
+    float: right;
+    font-size: 28px;
+    font-weight: bolder;
+  }
+  
+  .close:hover {
+    color: #000;
+    cursor: pointer;
+  }

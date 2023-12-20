@@ -1,25 +1,33 @@
 let sectionArea = document.getElementsByClassName("game-area")[0];
 let buttons = document.getElementsByClassName("control");
-// let playerScore = document.getElementById("player-score");
-// let computerScore = document.getElementById("computer-score");
 let playerImage = document.getElementsByClassName("player-image");
 let computerImage = document.getElementsByClassName("computer-image");
-// let message = document.getElementById("message");
 let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
 let easySymbol = ["rock", "paper", "scissor"];
+let modalBtn = document.getElementById("modalBtn");
+let modalContainer = document.getElementById("modal-container");
+let span = document.getElementsByClassName("close")[0];
 
-// document.addEventListener("DOMContentLoaded", function(){
-// });
 
 let menuBtn = document.getElementById("menuBtn");
 let menu = document.getElementById("menu");
+
+function openModal() {
+    modalContainer.style.display = "block";
+}
+
+function closeModal() {
+    modalContainer.style.display = "none";
+}
+
+modalBtn.addEventListener("click", openModal);
+modalContainer.addEventListener("click", closeModal);
+span.addEventListener("click", closeModal);
+
 playBtns = document.getElementsByClassName("menu-buttons");
 
-    let rulesHTML = `<div id="rulesModal" class="modal">
-                        <a class="close" href="index.html">
-                            <button id="closeModalBtn">X</button>
-                        </a>
-                    </div>`;
+    // let rulesHTML = `<div id="rulesModal" class="modal">
+    //                 </div>`;
 
     function gameMode(isEasy){
         for (let button of buttons) {
@@ -66,26 +74,18 @@ playBtns = document.getElementsByClassName("menu-buttons");
                 setQuitBtns();
             }
 
-            // RULES
+            // // RULES
             else if (this.innerHTML === "RULES") {
                 console.log("rule btn clicked")
-                sectionArea.innerHTML = rulesHTML;
-                // menu.style.display = "none";
-                sectionArea.style.alignSelf = "center";
+                modalContainer.innerHTML = `            <div class="modal-content" id="modal-content">
+                <span class="close">&times;</span>
+                <p>will place here text or image for rules</p>
+            </div>
+        </div>`
+                // sectionArea.innerHTML = rulesHTML;
+                // sectionArea.style.alignSelf = "center";
+                
 
-                // let closeBtn = document.getElementsByClassName("close")[0];
-                // let rulesModal = document.getElementById("rulesModal");
-
-                // window.onclick = function(event) {
-                //     //ill put rules element here when rule btn clicked
-                //     if (event.target == sectionArea ) {
-                //         console.log("remove modal was clicked")
-                //         rulesModal.style.display = "none";
-                //         menu.style.display = "block";
-                //     } 
-                // }
-            } else {
-                // menu.style.display = "block";
             }
 
         });
@@ -172,7 +172,6 @@ function updateScores(result) {
      sectionArea.style.backgroundColor = "red";
     }
 }
-
 
 // let quitBtn = document.getElementsByClassName("quitBtn");
 // quitBtn.addEventListener("click", function() {
