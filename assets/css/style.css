@@ -104,6 +104,7 @@ button:hover {
 .reset {
     width: 100px;
     align-self: center;
+    display: none;
 }
 
 /* .rule-content {

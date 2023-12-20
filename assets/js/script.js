@@ -22,67 +22,69 @@ modalBtn.addEventListener("click", openModal);
 modalContainer.addEventListener("click", closeModal);
 span.addEventListener("click", closeModal);
 
-playBtns = document.getElementsByClassName("menu-buttons");
+let playBtns = document.getElementsByClassName("menu-buttons");
 
-    function gameMode(isEasy){
-        for (let button of buttons) {
-            console.log("one menu button was clicked")
-            button.addEventListener("click", function() {
-                let playerOption = this.getAttribute("data-option");
-                letsPlay(playerOption, isEasy);
-            });
-        }
-    }
-
-    for (let playBtn of playBtns) {
-        playBtn.addEventListener('mouseenter', function() {
-            hoverSound.play();
+function gameMode(isEasy){
+    for (let button of buttons) {
+        console.log("one menu button was clicked")
+        button.addEventListener("click", function() {
+            let playerOption = this.getAttribute("data-option");
+            letsPlay(playerOption, isEasy);
         });
-        console.log("play btns for loop");
-        playBtn.addEventListener("click", function(){
-        // PLAY EASY
-            if (this.innerHTML === "PLAY EASY" ) {
-                sectionArea.innerHTML = playEasyHTML;
-                sectionArea.style.display = "flow"
-                menu.style.display = "none";
-                // Can I make these a setupGame() to reuse since Im using it twice
-                // setupGame();
-                playerScore = document.getElementById("player-score");
-                computerScore = document.getElementById("computer-score");
-                message = document.getElementById("message");
-                buttons = document.getElementsByClassName("control");
-                message.textContent = "Lets go!";
-                gameMode(true);
-                // setQuitBtns();
-            }
-        // PLAY HARD
-            else if (this.innerHTML === "PLAY HARD") {
-                console.log("PLAY HARD BTN CLICKED!")
-                sectionArea.innerHTML = playHardHTML;
-                sectionArea.style.display = "flow"
-                menu.style.display = "none";
+    }
+}
+
+for (let playBtn of playBtns) {
+    playBtn.addEventListener('mouseenter', function() {
+        hoverSound.play();
+    });
+    console.log("play btns for loop");
+    playBtn.addEventListener("click", function(){
+    // PLAY EASY
+        if (this.innerHTML === "PLAY EASY" ) {
+            sectionArea.innerHTML = playEasyHTML;
+            sectionArea.style.display = "flow"
+            menu.style.display = "none";
             // Can I make these a setupGame() to reuse since Im using it twice
-            // setpupGame();
-                playerScore = document.getElementById("player-score");
-                computerScore = document.getElementById("computer-score");
-                message = document.getElementById("message");
-                buttons = document.getElementsByClassName("control");
-                message.textContent = "Lets go!";
-                gameMode(false); 
-                // setQuitBtns();
-            }
-        // RULES
-            else if (this.innerHTML === "RULES") {
-                console.log("rule btn clicked")
-                modalContainer.innerHTML = `<div class="modal-content" id="modal-content">
-                <span class="close">&times;</span>
-                <p><img class="rules-image" src="assets/images/RoshomboRules.jpeg" alt="rules"></p>
-            </div>
-        </div>`
-            }
+            // setupGame();
+            playerScore = document.getElementById("player-score");
+            computerScore = document.getElementById("computer-score");
+            message = document.getElementById("message");
+            buttons = document.getElementsByClassName("control");
+            message.textContent = "Lets go!";
+            gameMode(true);
+            resetBtn.style.display = "block";
+            // setQuitBtns();
+        }
+    // PLAY HARD
+        else if (this.innerHTML === "PLAY HARD") {
+            console.log("PLAY HARD BTN CLICKED!")
+            sectionArea.innerHTML = playHardHTML;
+            sectionArea.style.display = "flow"
+            menu.style.display = "none";
+        // Can I make these a setupGame() to reuse since Im using it twice
+        // setpupGame();
+            playerScore = document.getElementById("player-score");
+            computerScore = document.getElementById("computer-score");
+            message = document.getElementById("message");
+            buttons = document.getElementsByClassName("control");
+            message.textContent = "Lets go!";
+            gameMode(false); 
+            resetBtn.style.display = "block";
+            // setQuitBtns();
+        }
+    // RULES
+        else if (this.innerHTML === "RULES") {
+            console.log("rule btn clicked")
+            modalContainer.innerHTML = `<div class="modal-content" id="modal-content">
+            <span class="close">&times;</span>
+            <p><img class="rules-image" src="assets/images/RoshomboRules.jpeg" alt="rules"></p>
+        </div>
+    </div>`
+        }
 
-        });
-    }
+    });
+}
     
 // function setQuitBtns() {
 //     console.log("function quit BUTTONS running!")
@@ -179,7 +181,6 @@ let resetBtn = document.getElementById("resetBtn");
 let modalRest = document.getElementById("confirmationModal");
 let confirmBtn = document.getElementById("confirmBtn");
 let cancelBtn = document.getElementById("cancelBtn");
-
 
 resetBtn.addEventListener("click", function(){
     modalRest.style.display = "block";
