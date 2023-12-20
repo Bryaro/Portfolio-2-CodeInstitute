@@ -60,6 +60,14 @@ h1 {
 /* #menuBtn {
     display: none;
 } */
+button {
+    background-color: dodgerblue;
+    color: white;
+}
+
+button:hover {
+    border-radius: 10px;
+}
 
 #easyBtn, #hardBtn {
     height: 50px;
@@ -145,6 +153,7 @@ button:hover, .control:hover {
     border: 1px solid black;
     width: 70%;
     margin-top: 20%;
+    text-align: center;
   }
   
   /* The Close Button */
