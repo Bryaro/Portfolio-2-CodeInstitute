@@ -175,7 +175,12 @@ let modalRest = document.getElementById("confirmationModal");
 let CofirmBtn = document.getElementById("confirmBtn");
 let cancelBtn = document.getAnimations("cancelBtn");
 
+
 resetBtn.addEventListener("click", function() {
+    modalRest.style.display = "block";
+});
+
+CofirmBtn.addEventListener("click", function(){
     window.location.reload();
 })
 
