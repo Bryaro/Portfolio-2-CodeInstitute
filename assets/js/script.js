@@ -37,8 +37,14 @@ function gameMode(isEasy){
 let muteBtn = document.getElementById("muteBtn");
 muteBtn.addEventListener("click", function(){
     console.log("muteBtn clicked!")
-    hoverSound.muted = !hoverSound.muted;
+    if (hoverSound.muted = !hoverSound.muted) {
+        muteBtn.innerHTML = `<i class="fas fa-volume-mute"></i>`;
+    } else {
+        muteBtn.innerHTML = `<i class="fas fa-volume-up"></i>`;
+    }
 });
+
+hoverSound.muted = "true";
 
 for (let playBtn of playBtns) {
     playBtn.addEventListener('mouseenter', function() {
