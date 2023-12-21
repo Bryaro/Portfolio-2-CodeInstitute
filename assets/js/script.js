@@ -34,9 +34,17 @@ function gameMode(isEasy){
     }
 }
 
+let muteBtn = document.getElementById("muteBtn");
+muteBtn.addEventListener("click", function(){
+    console.log("muteBtn clicked!")
+    hoverSound.muted = !hoverSound.muted;
+});
+
 for (let playBtn of playBtns) {
     playBtn.addEventListener('mouseenter', function() {
-        hoverSound.play();
+        if (!hoverSound.muted) {
+            hoverSound.play();
+        }
     });
     console.log("play btns for loop");
     playBtn.addEventListener("click", function(){
