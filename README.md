@@ -29,7 +29,7 @@ Created in 2023 by Briar Osman. All rights reserved.
 ![Play Hard](/assets/documentations/screenPlayHard.png)
 
 **RULES**
-![Rules](/assets/documentations/)
+![Rules](/assets/documentations/screenRules.png)
 
 **GAME RESULT**
 ![Result](/assets/documentations/screenVICTORY.png)
