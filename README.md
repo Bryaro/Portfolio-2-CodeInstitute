@@ -18,21 +18,24 @@ Created in 2023 by Briar Osman. All rights reserved.
 ---
 
 **MAIN MENU**
-![]()
-
-**PLAY HARD**
-![]()
+![Main Menu](/assets/documentations/screenMain.png)
 
 **PLAY EASY**
-![]()
+![Play Easy](/assets/documentations/screenPlayEasy.png)
+
+**PLAY Hard**
+![Play hard](/assets/documentations/screenPlayHard.png)
 
 **RULES**
-![]()
+![Rules](/assets/documentations/screenRules.png)
 
 **GAME RESULT**
-![]()
+![Result](/assets/documentations/screenVICTORY.png)
 
 
+View more screenshots on my GitHub documentation. Click [Here](https://github.com/Bryaro/Portfolio-2-CodeInstitute/tree/Projects/assets/documentations)
+
+---
 
 ## Technologies Used
 - HTML5
@@ -42,13 +45,13 @@ Created in 2023 by Briar Osman. All rights reserved.
 ## Getting Started
 TESTS buttons etc
 
+#### HTML Validator W3C:
+![](/assets/documentations/validatorHTML.png)
+[Link to this HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbryaro.github.io%2FPortfolio-2-CodeInstitute%2F)
 
-
-#### HTML Validator W3 CSS:
-https://validator.w3.org/nu/?doc=https%3A%2F%2Fbryaro.github.io%2FPortfolio-2-CodeInstitute%2F
-
-#### CSS Validator W3 CSS (Jigsaw):
-https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbryaro.github.io%2FPortfolio-2-CodeInstitute%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+#### CSS Validator W3C (Jigsaw):
+![](/assets/documentations/validatorCSS.png)
+[Link to this CSS validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbryaro.github.io%2FPortfolio-2-CodeInstitute%2F)
 
 ### Prerequisites
 - A modern web browser like Chrome, Firefox, Safari, or Edge.
