@@ -61,14 +61,15 @@ for (let playBtn of playBtns) {
             menu.style.display = "none";
             // Can I make these a setupGame() to reuse since Im using it twice
             // setupGame();
-            playerScore = document.getElementById("player-score");
-            computerScore = document.getElementById("computer-score");
-            message = document.getElementById("message");
-            buttons = document.getElementsByClassName("control");
-            message.textContent = "Lets go!";
+            // playerScore = document.getElementById("player-score");
+            // computerScore = document.getElementById("computer-score");
+            // message = document.getElementById("message");
+            // buttons = document.getElementsByClassName("control");
+            // message.textContent = "Lets go!";
             gameMode(true);
-            resetBtn.style.display = "block";
+
             // setQuitBtns();
+            setupGame();
         }
     // PLAY HARD
         else if (this.innerHTML === "PLAY HARD") {
@@ -78,14 +79,15 @@ for (let playBtn of playBtns) {
             menu.style.display = "none";
         // Can I make these a setupGame() to reuse since Im using it twice
         // setpupGame();
-            playerScore = document.getElementById("player-score");
-            computerScore = document.getElementById("computer-score");
-            message = document.getElementById("message");
-            buttons = document.getElementsByClassName("control");
-            message.textContent = "Lets go!";
+            // playerScore = document.getElementById("player-score");
+            // computerScore = document.getElementById("computer-score");
+            // message = document.getElementById("message");
+            // buttons = document.getElementsByClassName("control");
+            // message.textContent = "Lets go!";
             gameMode(false); 
-            resetBtn.style.display = "block";
+            // resetBtn.style.display = "block";
             // setQuitBtns();
+            setupGame();
         }
     // RULES
         else if (this.innerHTML === "RULES") {
@@ -98,6 +100,15 @@ for (let playBtn of playBtns) {
         }
 
     });
+}
+
+function setupGame() {
+    playerScore = document.getElementById("player-score");
+    computerScore = document.getElementById("computer-score");
+    message = document.getElementById("message");
+    buttons = document.getElementsByClassName("control");
+    message.textContent = "Lets go!";
+    resetBtn.style.display = "block";
 }
     
 // function setQuitBtns() {
