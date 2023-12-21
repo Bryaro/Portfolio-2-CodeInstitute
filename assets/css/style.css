@@ -25,6 +25,10 @@ header {
     text-decoration: none;
 }
 
+#muteIcon {
+    cursor: pointer;
+}
+
 .roshambo {
     display: none;
 }

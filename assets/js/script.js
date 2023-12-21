@@ -33,12 +33,12 @@ function gameMode(isEasy){
     }
 }
 
-let muteBtn = document.getElementById("muteBtn");
-muteBtn.addEventListener("click", function(){
+let muteIcon = document.getElementById("muteIcon");
+muteIcon.addEventListener("click", function(){
     if (hoverSound.muted = !hoverSound.muted) {
-        muteBtn.innerHTML = `<i class="fas fa-volume-mute"></i>`;
+        muteIcon.innerHTML = `<i class="fas fa-volume-mute"></i>`;
     } else {
-        muteBtn.innerHTML = `<i class="fas fa-volume-up"></i>`;
+        muteIcon.innerHTML = `<i class="fas fa-volume-up"></i>`;
     }
 });
 
