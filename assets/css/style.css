@@ -23,6 +23,7 @@ header {
 .logo {
     color: white;
     text-decoration: none;
+    font-size: 70%;
 }
 
 #muteIcon {
