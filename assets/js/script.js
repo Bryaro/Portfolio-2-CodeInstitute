@@ -26,7 +26,6 @@ let playBtns = document.getElementsByClassName("menu-buttons");
 
 function gameMode(isEasy){
     for (let button of buttons) {
-        console.log("one menu button was clicked")
         button.addEventListener("click", function() {
             let playerOption = this.getAttribute("data-option");
             letsPlay(playerOption, isEasy);
@@ -36,7 +35,6 @@ function gameMode(isEasy){
 
 let muteBtn = document.getElementById("muteBtn");
 muteBtn.addEventListener("click", function(){
-    console.log("muteBtn clicked!")
     if (hoverSound.muted = !hoverSound.muted) {
         muteBtn.innerHTML = `<i class="fas fa-volume-mute"></i>`;
     } else {
@@ -52,51 +50,30 @@ for (let playBtn of playBtns) {
             hoverSound.play();
         }
     });
-    console.log("play btns for loop");
     playBtn.addEventListener("click", function(){
     // PLAY EASY
         if (this.innerHTML === "PLAY EASY" ) {
             sectionArea.innerHTML = playEasyHTML;
-            sectionArea.style.display = "flow"
+            sectionArea.style.display = "flow";
             menu.style.display = "none";
-            // Can I make these a setupGame() to reuse since Im using it twice
-            // setupGame();
-            // playerScore = document.getElementById("player-score");
-            // computerScore = document.getElementById("computer-score");
-            // message = document.getElementById("message");
-            // buttons = document.getElementsByClassName("control");
-            // message.textContent = "Lets go!";
             gameMode(true);
-
-            // setQuitBtns();
             setupGame();
         }
     // PLAY HARD
         else if (this.innerHTML === "PLAY HARD") {
-            console.log("PLAY HARD BTN CLICKED!")
             sectionArea.innerHTML = playHardHTML;
-            sectionArea.style.display = "flow"
+            sectionArea.style.display = "flow";
             menu.style.display = "none";
-        // Can I make these a setupGame() to reuse since Im using it twice
-        // setpupGame();
-            // playerScore = document.getElementById("player-score");
-            // computerScore = document.getElementById("computer-score");
-            // message = document.getElementById("message");
-            // buttons = document.getElementsByClassName("control");
-            // message.textContent = "Lets go!";
             gameMode(false); 
-            // resetBtn.style.display = "block";
-            // setQuitBtns();
             setupGame();
         }
     // RULES
         else if (this.innerHTML === "RULES") {
-            console.log("rule btn clicked")
             modalContainer.innerHTML = `<div class="modal-content" id="modal-content">
             <span class="close">&times;</span>
             <p><img class="rules-image" src="assets/images/RoshomboRules.jpeg" alt="rules"></p>
         </div>
-    </div>`
+    </div>`;
         }
 
     });
@@ -110,29 +87,8 @@ function setupGame() {
     message.textContent = "Lets go!";
     resetBtn.style.display = "block";
 }
-    
-// function setQuitBtns() {
-//     console.log("function quit BUTTONS running!")
-//    let quitBtns = document.getElementsByClassName("quitBtn");
-//    for (let quitBtn of quitBtns) {
-//         quitBtn.addEventListener("click", function() {
-//             console.log("playeasy Quit Btn clicked!")
-//             modalContainer.innerHTML = `    <section class="game-area">
-//             <div id="menu">
-//                 <button id="easyBtn" class="menu-buttons">PLAY EASY</button>
-//                 <button id="hardBtn" class="menu-buttons">PLAY HARD</button> 
-//                 <button class="menu-buttons" id="modalBtn">RULES</button>
-//                 <button class="menu-buttons">SETTINGS</button>
-//             </div>
-//             </section>
-//             `;
-//             sectionArea.innerHTML = modalContainer.innerHTML;
-//         })
-//    }
-// }
 
 function letsPlay(playerOption, isEasy) {
-    console.log("letsplay")
     let symbolArray = isEasy ? easySymbol : handSymbol;
     playerImage[0].src = `assets/images/${symbolArray[playerOption]}.jpg`;
     playerImage[0].alt = symbolArray[playerOption];
@@ -148,7 +104,6 @@ function letsPlay(playerOption, isEasy) {
 }
 
 function winner(playerOption, computerOption) {
-    console.log("winner")
     if (playerOption === computerOption) {
         return "draw";
     }
@@ -166,7 +121,6 @@ function winner(playerOption, computerOption) {
 }
 
 function updateScores(result) {
-    console.log("updateScores")
     if (result === "player") {
         playerScore.textContent = parseInt(playerScore.textContent) + 1;
             message.textContent = "You win!";
@@ -213,44 +167,8 @@ resetBtn.addEventListener("click", function(){
 
 confirmBtn.addEventListener("click", function(){
     window.location.reload();
-})
+});
 
 cancelBtn.addEventListener("click", function() {
     modalRest.style.display = "none";
-})
-
-
-
-// window.addEventListener(function(event){
-//     if (event.target == modalRest) {
-//         modalRest.style.display = "none";
-//     }
-// })
-
-// let quitBtn = document.getElementsByClassName("quitBtn");
-// quitBtn.addEventListener("click", function() {
-//     if (confirm("This website will quit, are you sure?")) {
-//         window.close();
-//     }
-// })
-
-// let ruleBtn = document.getElementById("rulesBtn");
-// let modal = document.getElementById("modal");
-// let span = document.getElementsByClassName("close")[0];
-
-// ruleBtn.addEventListener("click", function() {
-//     console.log("ruleBtn works")
-//     modal.style.display = "block";
-// });
-
-// span.addEventListener("click", function(){
-//     console.log("display none works on span")
-//     span.style.display = "none";
-// });
-
-// window.addEventListener("click", function(event) {
-//     console.log("window click works")
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// });
+});
