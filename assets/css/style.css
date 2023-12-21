@@ -1,6 +1,4 @@
-/* Google fonts imported */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
-
 
 body {
     font-family: "Raleway", sans-serif;
@@ -25,6 +23,10 @@ header {
 .logo {
     color: white;
     text-decoration: none;
+}
+
+.roshambo {
+    display: none;
 }
 
 h1 {
@@ -53,13 +55,6 @@ h1 {
     gap: 10px;
 }
 
-/* nav {
-    align-self: flex-end;
-} */
-
-/* #menuBtn {
-    display: none;
-} */
 button {
     background-color: dodgerblue;
     color: white;
@@ -107,26 +102,6 @@ button:hover {
     display: none;
 }
 
-/* .rule-content {
-    margin: 20% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 500px;
-} */
-
-/* .modal {
-    background: url(../images/RoshomboRules.jpeg) no-repeat center/cover;
-    width: 300px;
-    height: 300px;
-} */
-
-/* .close {
-    position: relative;
-    left: 135px;
-    font-size: 150%;
-    font-weight: bolder;
-} */
-
 button:hover, .control:hover {
     cursor: pointer;
     background-color: slateblue;
@@ -156,7 +131,7 @@ button:hover, .control:hover {
     margin-top: 20%;
     text-align: center;
   }
-  
+
   /* The Close Button */
   .close {
     color: darkgray;
@@ -198,7 +173,7 @@ footer {
     font-size: 0.8em;
 }
 
-
+/* Media Queries for Responsive Design on screen sizes over 425px */
 @media screen and (min-width: 425px) {
 
     .modal-content {
@@ -231,7 +206,7 @@ footer {
 
 }
 
-
+/* Media Queries for Responsive Design on screen sizes over 1024px */
 @media screen and (min-width: 1024px) {
     .modal-content {
         height: 50%;
