@@ -4,7 +4,7 @@ Welcome to the Roshambo game, click [here](https://bryaro.github.io/Portfolio-2-
 ![Site view](/assets/documentations/screen-Menu.png)
 
 ## Introduction
-Welcome to **Roshambo**, an sime version of "Rock Paper Scissors - Lizard Spock" game. This project is a web-based version of the classic game "Rock, Scissors, Paper" and the "Lizar Spock" version. I developed this project by using HTML5, CSS3 and JavaScript.
+Welcome to **Roshambo**, a simple version of "Rock Paper Scissors - Lizard Spock" game. This project is a web-based version of the classic game "Rock, Scissors, Paper" and the "Lizard Spock" version. I developed this project by using HTML5, CSS3 and JavaScript.
 
 Created in 2023 by Briar Osman. All rights reserved.
 
@@ -26,7 +26,7 @@ Created in 2023 by Briar Osman. All rights reserved.
 ![Play Easy](/assets/documentations/screenPlayEasy.png)
 
 **PLAY Hard**
-![Play hard](/assets/documentations/screenPlayHard.png)
+![Play Hard](/assets/documentations/screenPlayHard.png)
 
 **RULES**
 ![Rules](/assets/documentations/screenRules.png)
@@ -48,7 +48,7 @@ View more screenshots on my GitHub documentation folder. Click [Here](https://gi
 |       5 | Reset Game (Modal)   |
 
 
-### Lanuages used
+### Languages used
 | Count | Languages               |
 |------:|-------------------------|
 |     1 | CSS3                    |
@@ -68,7 +68,7 @@ to open page [click here](https://docs.github.com/en/get-started/writing-on-gith
 
 ## Technologies Used
 
-Balsamic wireframe and vanca for the design
+Balsamiq wireframes and Canva
 ## Phone and dekstop view
 Menu view: ![](/assets/documentations/wireframeMENU.png)
 
@@ -101,7 +101,7 @@ Test result:
 ![test screenshot WAVE](/assets/documentations/testWAVE.png)
 
 ---
-### Testing enviorment
+### Testing environment
 - Modern web browsers like Chrome, Firefox, Safari, and Edge.
 
 ## Manual Testing Instructions
@@ -189,7 +189,7 @@ Test result:
 
 
 ## Known Bugs [Deploy view]
-- Backgorund and other images didnt work after the project deplyed on GitHub pages. 
+- Background and other images didnt work after the project deployed on GitHub pages. 
 - With google devtools, finding the correct pathway and did antoher git add . --> git commit --> git push and worked fine, images now visible.
 ![](/assets/documentations/bug.png)
 
