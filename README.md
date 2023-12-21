@@ -37,13 +37,32 @@ View more screenshots on my GitHub documentation. Click [Here](https://github.co
 
 ---
 
-## Technologies Used
-- HTML5
-- CSS3
-- JavaScript (ES6)
+| View | Description          | 
+|--------:|----------------------|
+|       1 | Home (HTML)          |
+|       2 | Play Easy (playeasy.js) |
+|       3 | Play Hard (playhard.js) |
+|       4 | Game Rules (Modal)   |
+|       5 | Reset Game (Modal)   |
 
-## Getting Started
-TESTS buttons etc
+
+### Lanuages used
+| Count | Languages               |
+|------:|-------------------------|
+|     1 | CSS3                    |
+|     2 | JavaScript              |
+
+##### others:
+- HTML
+- MARKDOWN
+
+## Technologies Used
+
+balsamic wireframe with some simple design for the projet:
+## Phone and dekstop view
+Menu view: ![](/assets/documentations/wireframeMENU.png)
+
+All sections:![](/assets/documentations/wireframeSCREENS.png)
 
 #### HTML Validator W3C:
 ![](/assets/documentations/validatorHTML.png)
