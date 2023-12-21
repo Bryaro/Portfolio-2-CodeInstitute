@@ -25,7 +25,7 @@ Created in 2023 by Briar Osman. All rights reserved.
 **PLAY EASY**
 ![Play Easy](/assets/documentations/screenPlayEasy.png)
 
-**PLAY Hard**
+**PLAY HARD**
 ![Play Hard](/assets/documentations/screenPlayHard.png)
 
 **RULES**
