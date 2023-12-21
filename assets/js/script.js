@@ -71,7 +71,7 @@ for (let playBtn of playBtns) {
         else if (this.innerHTML === "RULES") {
             modalContainer.innerHTML = `<div class="modal-content" id="modal-content">
             <span class="close">&times;</span>
-            <p><img class="rules-image" src="assets/images/RoshomboRules.jpeg" alt="rules"></p>
+            <p><img class="rules-image" src="assets/images/rules.png" alt="rules"></p>
         </div>
     </div>`;
         }
