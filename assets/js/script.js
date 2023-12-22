@@ -41,8 +41,9 @@ muteIcon.addEventListener("click", function(){
     hoverSound.muted = !hoverSound.muted;
     clickSound.muted = !clickSound.muted;
     victorySound.muted = !victorySound.muted;
-    gameOverSound.muted = !gameOverSound.muted;
-    if (hoverSound.muted && !clickSound.muted) {
+    gameOverSound.muted =!gameOverSound.muted;
+
+    if (hoverSound.muted) {
         muteIcon.innerHTML = `<i class="fas fa-volume-mute"></i>`;
     } else {
         muteIcon.innerHTML = `<i class="fas fa-volume-up"></i>`;
