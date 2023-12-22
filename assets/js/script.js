@@ -8,7 +8,8 @@ let modalBtn = document.getElementById("modalBtn");
 let modalContainer = document.getElementById("modal-container");
 let span = document.getElementsByClassName("close")[0];
 let menu = document.getElementById("menu");
-let hoverSound = new Audio('assets/sounds/start-13691.mp3');
+let hoverSound = new Audio("assets/sounds/start-13691.mp3");
+let clickSound = new Audio("assets/sounds/decidemp3-14575.mp3");
 
 function openModal() {
     modalContainer.style.display = "block";
@@ -35,7 +36,10 @@ function gameMode(isEasy){
 
 let muteIcon = document.getElementById("muteIcon");
 muteIcon.addEventListener("click", function(){
-    if (hoverSound.muted = !hoverSound.muted) {
+    hoverSound.muted = !hoverSound.muted;
+    clickSound.muted = !clickSound.muted;
+
+    if (hoverSound.muted && !clickSound.muted ) {
         muteIcon.innerHTML = `<i class="fas fa-volume-mute"></i>`;
     } else {
         muteIcon.innerHTML = `<i class="fas fa-volume-up"></i>`;
@@ -43,11 +47,17 @@ muteIcon.addEventListener("click", function(){
 });
 
 hoverSound.muted = "true";
+clickSound.muted = "true";
 
 for (let playBtn of playBtns) {
     playBtn.addEventListener('mouseenter', function() {
         if (!hoverSound.muted) {
             hoverSound.play();
+        }
+    });
+        playBtn.addEventListener('click', function() {
+        if (!clickSound.muted) {
+            clickSound.play();
         }
     });
     playBtn.addEventListener("click", function(){

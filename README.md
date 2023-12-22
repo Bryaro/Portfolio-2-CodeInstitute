@@ -77,7 +77,10 @@ All sections:![](/assets/documentations/wireframeSCREENS.png)
 
 Canva used for icon![Icon Logo](/assets/documentations/screenCANVA.png)
 
-
+Sound:
+I used [Pixabay](https://pixabay.com/sound-effects/search/buttons/) as they offer: Download buttons royalty-free sound effects to use in your next project.
+For this project I Used two sounds:
+one for buttons when hovered over, and one sound for click
 
 ## Testing
 
