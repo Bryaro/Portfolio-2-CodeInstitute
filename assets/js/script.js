@@ -11,7 +11,7 @@ let menu = document.getElementById("menu");
 let hoverSound = new Audio("assets/sounds/start-13691.mp3");
 let clickSound = new Audio("assets/sounds/decidemp3-14575.mp3");
 let gameOverSound = new Audio("assets/sounds/gameover.mp3");
-let victorySound = new Audio("assets/sounds/victory.mp3")
+let victorySound = new Audio("assets/sounds/victory.mp3");
 
 function openModal() {
     modalContainer.style.display = "block";
