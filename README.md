@@ -4,7 +4,7 @@ Welcome to the Roshambo game, click [here](https://bryaro.github.io/Portfolio-2-
 ![Site view](/assets/documentations/screen-Menu.png)
 
 ## Introduction
-Welcome to **Roshambo**, a simple version of "Rock Paper Scissors - Lizard Spock" game. This project is a web-based version of the classic game "Rock, Scissors, Paper" and the "Lizard Spock" version. I developed this project by using HTML5, CSS3 and JavaScript.
+Welcome to **Roshambo**, a simple version of "Rock Paper Scissors - Lizard Spock" game. This project is a web-based version of the classic game "Rock, Scissors, Paper" and the "Lizard Spock" version. I developed this project by using HTML5, CSS3, and JavaScript.
 
 Created in 2023 by Briar Osman. All rights reserved.
 
@@ -69,7 +69,7 @@ to open page [click here](https://docs.github.com/en/get-started/writing-on-gith
 ## Technologies Used
 
 Balsamiq wireframes and Canva
-## Phone and dekstop view
+## Phone and desktop view
 Menu view: ![](/assets/documentations/wireframeMENU.png)
 
 All sections:![](/assets/documentations/wireframeSCREENS.png)
@@ -195,7 +195,7 @@ Test result:
 
 ## Known Bugs [Deploy view]
 - Background and other images didnt work after the project deployed on GitHub pages. 
-- With google devtools, finding the correct pathway and did antoher git add . --> git commit --> git push and worked fine, images now visible.
+- With google devtools, finding the correct pathway and did another git add . --> git commit --> git push and worked fine, images now visible.
 ![](/assets/documentations/bug.png)
 
 ## Contributing
