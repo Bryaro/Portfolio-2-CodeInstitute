@@ -10,6 +10,8 @@ let span = document.getElementsByClassName("close")[0];
 let menu = document.getElementById("menu");
 let hoverSound = new Audio("assets/sounds/start-13691.mp3");
 let clickSound = new Audio("assets/sounds/decidemp3-14575.mp3");
+let gameOverSound = new Audio("assets/sounds/gameover.mp3");
+let victorySound = new Audio("assets/sounds/victory.mp3")
 
 function openModal() {
     modalContainer.style.display = "block";
@@ -38,8 +40,9 @@ let muteIcon = document.getElementById("muteIcon");
 muteIcon.addEventListener("click", function(){
     hoverSound.muted = !hoverSound.muted;
     clickSound.muted = !clickSound.muted;
-
-    if (hoverSound.muted && !clickSound.muted ) {
+    victorySound.muted = !victorySound.muted;
+    gameOverSound.muted = !gameOverSound.muted;
+    if (hoverSound.muted && !clickSound.muted || !gameOverSound.muted || !victorySound.muted) {
         muteIcon.innerHTML = `<i class="fas fa-volume-mute"></i>`;
     } else {
         muteIcon.innerHTML = `<i class="fas fa-volume-up"></i>`;
@@ -48,6 +51,8 @@ muteIcon.addEventListener("click", function(){
 
 hoverSound.muted = "true";
 clickSound.muted = "true";
+victorySound.muted = "true";
+gameOverSound.muted = "true";
 
 for (let playBtn of playBtns) {
     playBtn.addEventListener('mouseenter', function() {
@@ -151,6 +156,7 @@ function updateScores(result) {
         <button>Back to Menu</button>
         </a>
      </div>`;
+     victorySound.play();
      sectionArea.style.backgroundColor = "Green";
      resetBtn.style.display = "none";
 
@@ -161,6 +167,7 @@ function updateScores(result) {
         <button>Back to Menu</button>
         </a>
      </div>`;
+     gameOverSound.play();
      sectionArea.style.backgroundColor = "red";
      resetBtn.style.display = "none";
     }
