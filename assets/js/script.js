@@ -63,6 +63,7 @@ modalBtn.addEventListener("click", openModal);
 modalContainer.addEventListener("click", closeModal);
 span.addEventListener("click", closeModal);
 
+// Assign scores, messages, controls for player and computer.
 function setupGame() {
     playerScore = document.getElementById("player-score");
     computerScore = document.getElementById("computer-score");
@@ -72,6 +73,7 @@ function setupGame() {
     resetBtn.style.display = "block";
 }
 
+// Sets up game mode (easy or hard) and attaches event listeners to buttons.
 function gameMode(isEasy){
     for (let button of buttons) {
         button.addEventListener("click", function() {
@@ -81,6 +83,7 @@ function gameMode(isEasy){
     }
 }
 
+// Toggles sound effects (mute/unmute).
 let muteIcon = document.getElementById("muteIcon");
 muteIcon.addEventListener("click", function(){
     hoverSound.muted = !hoverSound.muted;
@@ -135,6 +138,7 @@ for (let playBtn of playBtns) {
     });
 }
 
+// Handles gameplay logic based on selected options.
 function letsPlay(playerOption, isEasy) {
     let symbolArray = isEasy ? easySymbol : handSymbol;
     playerImage[0].src = `assets/images/${symbolArray[playerOption]}.jpg`;
@@ -162,11 +166,10 @@ function winner(playerOption, computerOption) {
     (playerOption === "spock" && (computerOption === "scissor" || computerOption === "rock"))) {
     return "player";
     } 
-
     return "computer";
-
 }
 
+// Updates the score and displays results.
 function updateScores(result) {
     if (result === "player") {
         playerScore.textContent = parseInt(playerScore.textContent) + 1;
