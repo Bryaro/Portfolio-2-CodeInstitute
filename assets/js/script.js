@@ -4,6 +4,7 @@ let playerImage = document.getElementsByClassName("player-image");
 let computerImage = document.getElementsByClassName("computer-image");
 let handSymbol = ["rock", "paper", "scissor", "lizard", "spock"];
 let easySymbol = ["rock", "paper", "scissor"];
+let playBtns = document.getElementsByClassName("menu-buttons");
 let modalBtn = document.getElementById("modalBtn");
 let modalContainer = document.getElementById("modal-container");
 let span = document.getElementsByClassName("close")[0];
@@ -12,6 +13,43 @@ let hoverSound = new Audio("assets/sounds/start-13691.mp3");
 let clickSound = new Audio("assets/sounds/decidemp3-14575.mp3");
 let gameOverSound = new Audio("assets/sounds/gameover.mp3");
 let victorySound = new Audio("assets/sounds/victory.mp3");
+let playerScore;
+let computerScore;
+let message;
+const playHardHTML = `<div>
+<p>Decide your option:</p>
+<button data-option="0" aria-label="rock" class="control">Rock</button>
+<button data-option="1" aria-label="paper" class="control">Paper</button>
+<button data-option="2" aria-label="scissor" class="control">Scissors</button>
+<button data-option="3" aria-label="lizard" class="control">Lizard</button>
+<button data-option="4" aria-label="spock" class="control">Spock</button>
+</div>
+<div id="message"></div>
+<div class="player-computer-container">
+<div class="player">
+    <h2 class="scores">My score: <span id="player-score">0</span></h2>
+    <img class="player-image" src="assets/images/player-head.jpg" alt="hands">
+</div>
+<div class="computer-player">
+    <h2 class="scores">His score: <span id="computer-score">0</span></h2>
+    <img class="computer-image" src="assets/images/computer-head.jpg" alt="hands">
+</div>`;
+const playEasyHTML = `<div>
+<p>Decide your option:</p>
+<button data-option="0" aria-label="rock" class="control">Rock</button>
+<button data-option="1" aria-label="paper" class="control">Paper</button>
+<button data-option="2" aria-label="scissor" class="control">Scissors</button>
+</div>
+<div id="message"></div>
+<div class="player-computer-container">
+<div class="player">
+    <h2 class="scores">My score: <span id="player-score">0</span></h2>
+    <img class="player-image" src="assets/images/player-head.jpg" alt="hands">
+</div>
+<div class="computer-player">
+    <h2 class="scores">His score: <span id="computer-score">0</span></h2>
+    <img class="computer-image" src="assets/images/computer-head.jpg" alt="hands">
+</div>`;
 
 function openModal() {
     modalContainer.style.display = "block";
@@ -25,7 +63,14 @@ modalBtn.addEventListener("click", openModal);
 modalContainer.addEventListener("click", closeModal);
 span.addEventListener("click", closeModal);
 
-let playBtns = document.getElementsByClassName("menu-buttons");
+function setupGame() {
+    playerScore = document.getElementById("player-score");
+    computerScore = document.getElementById("computer-score");
+    message = document.getElementById("message");
+    buttons = document.getElementsByClassName("control");
+    message.textContent = "Lets go!";
+    resetBtn.style.display = "block";
+}
 
 function gameMode(isEasy){
     for (let button of buttons) {
@@ -67,41 +112,27 @@ for (let playBtn of playBtns) {
         }
     });
     playBtn.addEventListener("click", function(){
-    // PLAY EASY
+
         if (this.innerHTML === "PLAY EASY" ) {
             sectionArea.innerHTML = playEasyHTML;
             sectionArea.style.display = "flow";
             menu.style.display = "none";
             gameMode(true);
             setupGame();
-        }
-    // PLAY HARD
-        else if (this.innerHTML === "PLAY HARD") {
+        } else if (this.innerHTML === "PLAY HARD") {
             sectionArea.innerHTML = playHardHTML;
             sectionArea.style.display = "flow";
             menu.style.display = "none";
             gameMode(false); 
             setupGame();
-        }
-    // RULES
-        else if (this.innerHTML === "RULES") {
+        } else if (this.innerHTML === "RULES") {
             modalContainer.innerHTML = `<div class="modal-content" id="modal-content">
             <span class="close">&times;</span>
             <p><img class="rules-image" src="assets/images/rules.png" alt="rules"></p>
         </div>
     </div>`;
         }
-
     });
-}
-
-function setupGame() {
-    playerScore = document.getElementById("player-score");
-    computerScore = document.getElementById("computer-score");
-    message = document.getElementById("message");
-    buttons = document.getElementsByClassName("control");
-    message.textContent = "Lets go!";
-    resetBtn.style.display = "block";
 }
 
 function letsPlay(playerOption, isEasy) {
