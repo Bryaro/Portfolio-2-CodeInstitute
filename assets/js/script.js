@@ -157,12 +157,12 @@ function updateScores(result) {
 }
 
 let resetBtn = document.getElementById("resetBtn");
-let modalRest = document.getElementById("confirmationModal");
+let gameResetModal = document.getElementById("confirmationModal");
 let confirmBtn = document.getElementById("confirmBtn");
 let cancelBtn = document.getElementById("cancelBtn");
 
 resetBtn.addEventListener("click", function(){
-    modalRest.style.display = "block";
+    gameResetModal.style.display = "block";
 });
 
 confirmBtn.addEventListener("click", function(){
@@ -170,5 +170,5 @@ confirmBtn.addEventListener("click", function(){
 });
 
 cancelBtn.addEventListener("click", function() {
-    modalRest.style.display = "none";
+    gameResetModal.style.display = "none";
 });

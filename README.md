@@ -16,7 +16,7 @@ Created in 2023 by Briar Osman. All rights reserved.
 - **Mute/Unmute Button**: Control the game buttons sound as you wish. Default muted.
 - **Player vs Computer**: Test your skills against a computer opponent.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
-- **Dynamic Results**: Instant feedback and winner announcements.
+- **Dynamic Results**: Instant feedback and winner announcements on round five.
 ---
 
 **MAIN MENU**
